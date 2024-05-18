@@ -1,0 +1,17 @@
+/*
+ * quarternary.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef QUARTERNARY_H_
+#define QUARTERNARY_H_
+
+class Quarternary: public SubExpression {
+public:
+	Quarternary(Expression* left, Expression* middle, Expression* right): SubExpression(left, right), middle(middle), middleRight(middleRight){}
+};
+
+
+#endif /* QUARTERNARY_H_ */

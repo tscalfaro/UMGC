@@ -1,0 +1,153 @@
+package project_3;
+import java.util.ArrayList;
+
+public class BinaryTree {
+	private TreeNode root;
+	
+	private static class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		
+		public TreeNode(int val){
+			this.val = val;
+		}
+	}
+	
+	private TreeNode buildTree(String preorder) {
+		if (preorder == null || preorder.isEmpty()) {
+	        return null;
+	    }
+
+	    // Remove leading and trailing whitespace
+	    preorder = preorder.trim();
+
+	    // Extract the root node value and remove it from the string
+	    int rootVal = extractRootValue(preorder);
+	    preorder = preorder.substring(String.valueOf(rootVal).length()).trim();
+
+	    // Check if the remaining string represents a leaf node
+	    if (!preorder.startsWith("(")) {
+	        return new TreeNode(rootVal);
+	    }
+
+	    // Find the end index of the left subtree
+	    int leftEnd = findMatchingParenthesis(preorder, 0);
+	    String leftSubtree = preorder.substring(1, leftEnd);
+
+	    // Extract the remaining string for the right subtree
+	    String rightSubtree = preorder.substring(leftEnd + 1);
+	    System.out.println("left: " + leftSubtree);
+	    System.out.println("right: " + rightSubtree);
+	    // Construct the root node and recursively build the left and right subtrees
+	    TreeNode root = new TreeNode(rootVal);
+	    root.left = buildTree(leftSubtree);
+	    root.right = buildTree(rightSubtree);
+
+	    return root;
+	}
+	
+	private int extractRootValue(String s) {
+	    int start = s.indexOf('(') + 1;
+	    int end = s.indexOf(' ', start);
+	    if (end == -1) {
+	        throw new IllegalArgumentException("Invalid preorder string format: missing root value");
+	    }
+	    return Integer.parseInt(s.substring(start, end));
+	}
+	
+	private int findMatchingParenthesis(String str, int start) {
+        int count = 0;
+        for (int i = start; i < str.length(); i++) {
+            if (str.charAt(i) == '(') {
+                count++;
+            } else if (str.charAt(i) == ')') {
+                count--;
+                if (count == 0) {
+                    return i;
+                }
+            }
+        }
+        return -1; // Matching parenthesis not found
+    }
+	
+	private TreeNode buildBalancedTree(int[] values, int start, int end) {
+		if (start > end)
+			return null;
+		int mid = (start + end) / 2;
+		TreeNode node = new TreeNode(values[mid]);
+		node.left = buildBalancedTree(values, start, mid - 1);
+		node.right = buildBalancedTree(values, mid + 1, end);
+		return node;
+	}
+	
+	public BinaryTree(String preorder) {
+		this.root = buildTree(preorder);
+	}
+	
+	public BinaryTree(ArrayList<Integer> values) {
+		int[] valArr = new int[values.size()];
+		for(int i = 0; i < values.size(); i++)
+			valArr[i] = values.get(i);
+		this.root = buildBalancedTree(valArr, 0, valArr.length - 1);
+	}
+	
+	public void printIndented() {
+		printIndented(root, 0);
+	}
+	
+	public void printIndented(TreeNode node, int depth) {
+		if (node == null)
+			return;
+		for (int i = 0; i < depth; i++)
+			System.out.print("  ");
+		System.out.println(node.val);
+		printIndented(node.left, depth + 1);
+		printIndented(node.right, depth + 1);
+	}
+	
+	public int getHeight() {
+		return height(root);
+	}
+	
+	private int height(TreeNode node) {
+		if (node == null) {
+			return -1;
+		}
+		int leftHeight = height(node.left);
+		int rightHeight = height(node.right);
+		
+		return Math.max(leftHeight, rightHeight) + 1;
+	}
+	
+	public boolean isBalanced() {
+		return checkHeight(root) != -1;
+	}
+	
+	private int checkHeight(TreeNode node) {
+		if (node == null)
+			return 0;
+		int leftHeight = checkHeight(node.left);
+		if (leftHeight == -1)
+			return -1;
+		int rightHeight = checkHeight(node.right);
+		if (rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1)
+			return -1;
+		return Math.max(leftHeight, rightHeight) + 1;
+		
+	}
+	
+	public ArrayList<Integer> getValues() {
+		ArrayList<Integer> values = new ArrayList<>();
+		preOrderTraversal(root, values);
+		return values;
+	}
+	
+	public void preOrderTraversal(TreeNode node, ArrayList<Integer> values) {
+		if (node != null) {
+			values.add(node.val);
+			preOrderTraversal(node.left, values);
+			preOrderTraversal(node.right, values);
+		}
+	}
+}

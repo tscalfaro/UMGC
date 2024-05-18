@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="landing-page">
+	    <section class="landing-section-1">
+	        <h3>Portfolio</h3>
+	        <h1>Leah<br>Scalfaro</h1>
+	        <section class="landing-section-1-bottom">
+				<h3 style="margin-top: 20px;">Marketing Professional</h3>
+				<a href="mailto:leahscalfaro@gmail.com">Email Me</a>
+				</section>
+	    </section>
+	
+	    <section class="landing-section-2"></section>
+	</div>
+	<div class="bio-page">
+		<section class="bio-section-1">
+			<h3>BIO</h3>
+			<div class="bio-img-div"></div>
+		</section>
+		<section class="bio-section-2">
+			<h2>This is a test</h2>
+			<p>This paradlknfaldnkfasndovasdojgnsadk flasdknajvkdn saf asjdnjslan fdsaj flasdjnfls </p>
+			<p>This paradlknfaldnkfasndovasdojgnsadk flasdknajvkdn saf asjdnjslan fdsaj flasdjnfls </p>
+		</section>
+	</divc>
+{% endblock %}

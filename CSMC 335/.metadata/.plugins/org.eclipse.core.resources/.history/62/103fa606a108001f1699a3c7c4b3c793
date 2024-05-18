@@ -1,0 +1,125 @@
+package application;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+
+public class Main extends Application {
+	private int seconds = 0;
+	private Label timerLabel;
+	private Button pauseBtn;
+	private Button stopBtn;
+	private Button startBtn;
+	private Timer timer;
+	
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			//Timer
+			timerLabel = new Label("Seconds: 0");
+			timerLabel.setStyle("-fx-pref-width: 100px;");
+			//Timer Container
+			VBox topBox = new VBox();
+			topBox.setPadding(new Insets(10));
+			topBox.getChildren().add(timerLabel);
+			
+			//Buttons
+			pauseBtn = new Button("Pause");
+			pauseBtn.setOnAction(event -> pauseBtnHandler());
+			stopBtn = new Button("Stop");
+			stopBtn.setOnAction(event -> stopBtnHandler());
+			startBtn = new Button("Start");
+			startBtn.setOnAction(event -> startBtnHandler());
+			
+			//Button Container
+			HBox btnBox = new HBox();
+			btnBox.setPadding(new Insets(10));
+			btnBox.setSpacing(25);
+			btnBox.setAlignment(Pos.CENTER);
+			btnBox.getChildren().addAll(startBtn, stopBtn, pauseBtn);
+			
+			//Test Lane
+			Lane lane = new Lane();
+			Lane lane2 = new Lane();
+			Lane lane3 = new Lane();
+			Car car1 = new Car(50, 30, 5);
+			//Lane Container
+			HBox laneContainer = new HBox();
+			laneContainer.setPadding(new Insets(10));
+			laneContainer.setAlignment(Pos.CENTER);
+			laneContainer.setSpacing(15);
+			laneContainer.getChildren().addAll(lane, lane2, lane3);
+			
+			BorderPane root = new BorderPane();
+			root.setTop(topBox);
+			root.setCenter(laneContainer);
+			root.setBottom(btnBox);
+			Scene scene = new Scene(root,1200,750);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Traffic Light Simulator");
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	private void startBtnHandler() {
+		startTimer();
+	}
+	
+	private void stopBtnHandler() {
+		timer.cancel();
+		seconds = 0;
+		if (pauseBtn.getText().equals("Continue")) {
+			pauseBtn.setText("Pause");
+		}
+	}
+	
+	private void pauseBtnHandler() {
+		if (pauseBtn.getText().equals("Pause")) {
+			timer.cancel();
+			pauseBtn.setText("Continue");
+		} else {
+			startTimer();
+			pauseBtn.setText("Pause");
+		}
+	}
+	
+	private void startTimer() {
+		if (timer != null) {
+			timer.cancel();
+		}
+        timer = new Timer();
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                seconds++;
+                Platform.runLater(() -> {
+                    timerLabel.setText("Seconds: " + seconds);
+                });
+            }
+        };
+        // Schedule the task to run every second
+        timer.scheduleAtFixedRate(task, 0, 1000);
+    }
+}

@@ -1,0 +1,50 @@
+'''
+Created on Nov 15, 2023
+
+@author: tscal
+Created by: Antonio Scalfaro
+SDEV 300 / 7381
+Lab 5 - Data Analysis
+This program ...
+'''
+from pickle
+def welcome_message():
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 5 - Data Analysis")
+    print("This program ... ")
+    print("---------------------------------------------------------\n")
+
+def exit_message():
+    print("Thank you for using the Data Analysis program\n")
+    print("---------------------------------------------------------\n")
+
+def file_menu():
+    f = ""
+    while True:
+        print("Select the file you'd like to analyze")
+        print("1 - Population Data")
+        print("2 - Housing Data")
+        selection = input().strip()
+        try:
+            selection = int(selection)
+            if selection == 1:
+                f = "PopChange.csv"
+            elif selection == 2:
+                f = "Housing.csv"
+            else:
+                print("Selection not valid, try again.")
+                continue
+            return f
+        except ValueError as e:
+            print(f"Error: {e}. Please enter valid numeric input")
+    
+def main():
+    welcome_message()
+    program_cont = True
+    while program_cont:
+        file = open(file_menu())
+    exit_message()
+
+if __name__ == '__main__':
+    pass

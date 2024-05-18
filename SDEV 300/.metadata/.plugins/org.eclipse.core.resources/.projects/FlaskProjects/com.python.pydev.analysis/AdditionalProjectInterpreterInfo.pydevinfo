@@ -1,0 +1,22 @@
+-- VERSION_5
+-- START DISKCACHE_3
+C:\Users\tscal\Desktop\UMGC\SDEV 300\.metadata\.plugins\org.eclipse.core.resources\.projects\FlaskProjects\com.python.pydev.analysis\v2_indexcache
+hello_world.__init__|1700847083441477200|C:\Users\tscal\Desktop\UMGC\SDEV 300\FlaskProjects\hello_world|^
+hello_world.hello_sdev|1700855045267410900|C:\Users\tscal\Desktop\UMGC\SDEV 300\FlaskProjects\hello_world\hello_sdev.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=C:\Users\tscal\Desktop\UMGC\SDEV 300\FlaskProjects\hello_world\hello_sdev.py
+2=hello_world.hello_sdev
+-- END DICTIONARY
+-- START TREE 1
+5
+app|1|app!1^8#1*19@
+hel|1|hello!1^21#5*18@
+ind|1|index!1^10#5*18@
+myt|1|myTemp!1^27#5*18@
+sho|1|show_hello!1^14#5*18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

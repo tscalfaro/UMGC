@@ -1,0 +1,6 @@
+DROP TABLE Customer_Movie;
+DROP TABLE Customer;
+DROP TABLE Movie;
+DROP TABLE Distributor;
+DROP TABLE Catalog;
+DROP TABLE Discount;

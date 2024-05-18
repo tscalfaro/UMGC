@@ -1,0 +1,56 @@
+package assignment_3;
+
+public class Reservation {
+
+	int guestID;
+	String roomType;
+	String reservationStartDate;
+	String reservationEndDate;
+	
+	//getters
+	public UUID getReservationID() {
+		
+	}
+	
+	public Date getReservationDate() {
+		
+	}
+	
+	public int getGuestID() {
+		return guestID;
+	}
+	
+	public String getRoomType() {
+		return roomType;
+	}
+	
+	public String getReservationStartDate() {
+		return reservationStartDate;
+	}
+	
+	public String getReservationEndDate() {
+		return reservationEndDate;
+	}
+	
+	//setters
+	public void setCustomerID(int newValue) {
+		
+	}
+	
+	public void setRoom(String newValue) {
+		
+	}
+	
+	public void setReservationStartDate(String newValue) {
+		
+	}
+	
+	public void setReservationEndDate(String newValue) {
+		
+	}
+	
+	public long calculateReservationNumberOfDays() throws Exception {
+		long days = 0;
+		return days;
+	}
+}

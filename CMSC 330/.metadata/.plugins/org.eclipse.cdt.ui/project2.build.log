@@ -1,0 +1,16 @@
+13:29:20 **** Incremental Build of configuration Debug for project project2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o variable.o "..\\variable.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o "..\\project2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o operand.o "..\\operand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o parse.o "..\\parse.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o subexpression.o "..\\subexpression.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o symboltable.o "..\\symboltable.cpp" 
+..\symboltable.cpp: In member function 'double SymbolTable::lookUp(std::__cxx11::string) const':
+..\symboltable.cpp:26:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < elements.size(); i++)
+                     ~~^~~~~~~~~~~~~~~~~
+g++ -o project2.exe operand.o parse.o project2.o subexpression.o symboltable.o variable.o 
+
+13:29:23 Build Finished. 0 errors, 1 warnings. (took 3s.204ms)
+

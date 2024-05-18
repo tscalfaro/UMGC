@@ -1,0 +1,116 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+
+public class Graph {
+
+	private Map<Vertex, List<Vertex>> adjacencyList;
+	private Set<Vertex> vertices;
+	
+	public Graph() {
+		adjacencyList = new HashMap<>();
+		vertices = new HashSet<>();
+	}
+	
+	public void addVertex(Vertex vertex) {
+		vertices.add(vertex);
+		adjacencyList.putIfAbsent(vertex, new ArrayList<>());
+	}
+	
+	public void addEdge(Vertex source, Vertex destination) {
+		adjacencyList.get(source).add(destination);
+		adjacencyList.get(destination).add(source);
+	}
+	
+	public boolean hasCycles() {
+		Set<Vertex> visited = new HashSet<>();
+		
+		for(Vertex vertex : adjacencyList.keySet()) {
+			if(!visited.contains(vertex) && hasCycles(vertex, null, visited)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean hasCycles(Vertex vertex, Vertex parent, Set<Vertex> visited) {
+		visited.add(vertex);
+		for(Vertex neighbor : adjacencyList.get(vertex)) {
+			if(!visited.contains(neighbor)) {
+				if(hasCycles(neighbor, vertex, visited)) {
+					return true;
+				}
+			} else if (!neighbor.equals(parent)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean isConnected() {
+		if(vertices.isEmpty()) {
+			return true;
+		}
+		
+		Set<Vertex> visited = depthFirstSearch(vertices.iterator().next());
+		return visited.size() == vertices.size();
+		
+	}
+	
+	public Set<Vertex> depthFirstSearch(Vertex startVertex){
+		Set<Vertex> visited = new HashSet<>();
+		dfs(startVertex, visited);
+		return visited;
+	}
+	
+	private void dfs(Vertex vertex, Set<Vertex> visited) {
+		visited.add(vertex);
+		for(Vertex neighbor : adjacencyList.get(vertex)) {
+			if (!visited.contains(neighbor)) {
+				dfs(neighbor, visited);
+			}
+		}
+	}
+	
+	public Set<Vertex> breadthFirstSearch(Vertex startVertex){
+		Set<Vertex> visited = new HashSet<>();
+		Queue<Vertex> queue = new LinkedList<>();
+		queue.add(startVertex);
+		
+		while(!queue.isEmpty()) {
+			Vertex current = queue.poll();
+			visited.add(current);
+			for(Vertex neighbor : adjacencyList.get(current)) {
+				if(!visited.contains(neighbor)) {
+					visited.add(neighbor);
+					queue.add(neighbor);
+				}
+			}
+		}
+		return visited;
+	}
+	
+	public Set<Vertex> getVertices() {
+        return vertices;
+    }
+
+    public List<List<Vertex>> getEdges() {
+        List<List<Vertex>> edges = new ArrayList<>();
+        for (Vertex source : adjacencyList.keySet()) {
+            for (Vertex destination : adjacencyList.get(source)) {
+                List<Vertex> edge = new ArrayList<>();
+                edge.add(source);
+                edge.add(destination);
+                edges.add(edge);
+            }
+        }
+        return edges;
+    }
+}

@@ -1,0 +1,29 @@
+/*
+ * quarternary.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef QUARTERNARY_H_
+#define QUARTERNARY_H_
+#include <iostream>
+class Quarternary: public SubExpression {
+public:
+	Quarternary(Expression* left, Expression* middle, Expression* middleRight, Expression* right): SubExpression(left, right), middle(middle), middleRight(middleRight){
+
+	}
+	double evaluate(){
+		std::cout << "Left value: " << left->evaluate() << std::endl;
+		std::cout << "Middle value: " << middle->evaluate() << std::endl;
+		std::cout << "Right value: " << right->evaluate() << std::endl;
+		return (left->evaluate() < 0) ? middle->evaluate() : ((left->evaluate() == 0) ? middleRight->evaluate() : right->evaluate());
+	}
+
+private:
+	Expression* middle;
+	Expression* middleRight;
+};
+
+
+#endif /* QUARTERNARY_H_ */

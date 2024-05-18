@@ -1,0 +1,43 @@
+package application;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+public class Car extends Rectangle{
+	private int speed;
+	private int xPos;
+	private int yPos;
+	double conversionFactor = 1000.0 / 3600.0;
+	
+	public Car(int width, int height, int speed) {
+		super(width, height, Color.DARKSLATEBLUE);
+		this.speed = speed;
+	}
+	
+	public int getSpeed() {
+		return speed;
+	}
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	
+	public int getXPos() {
+		return xPos;
+	}
+	
+	public void setXPos(int xPos) {
+		this.xPos = xPos;
+	}
+	
+	public int getYPos() {
+		return yPos;
+	}
+	
+	public void setYPos(int yPos) {
+		this.yPos = yPos;
+	}
+	
+	public int getMoveDistance(double timeInSeconds) {
+		return (int) ((getSpeed() * timeInSeconds) * conversionFactor);
+	}
+}

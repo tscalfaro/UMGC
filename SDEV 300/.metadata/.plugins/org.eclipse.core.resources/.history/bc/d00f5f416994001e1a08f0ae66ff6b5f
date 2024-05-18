@@ -1,0 +1,101 @@
+2023-12-06 13:49:04,105 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 72, in index
+    return handle_login()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 158, in handle_login
+    log_message = f"Failed login attempt for: {username} on: {formatted_datetime} from IP: {request.remote.addr}"
+                                                                                            ^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'remote'
+2023-12-06 13:49:04,110 - INFO - 127.0.0.1 - - [06/Dec/2023 13:49:04] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2023-12-06 13:50:16,860 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:16] "POST / HTTP/1.1" 200 -
+2023-12-06 13:50:16,883 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 13:50:22,788 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:22] "GET / HTTP/1.1" 200 -
+2023-12-06 13:50:22,820 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 13:50:23,053 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:23] "[36mGET /static/images/baseball_spinning.gif HTTP/1.1[0m" 304 -
+2023-12-06 13:50:29,615 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 72, in index
+    return handle_login()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 158, in handle_login
+    log_message = f"Failed login attempt for: {username} on: {formatted_datetime} from IP: {request.remote.addr}"
+                                                                                            ^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'remote'
+2023-12-06 13:50:29,618 - INFO - 127.0.0.1 - - [06/Dec/2023 13:50:29] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2023-12-06 13:53:08,772 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 72, in index
+    return handle_login()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 156, in handle_login
+    log_message = f"Failed login attempt for: {username} from IP: {request.remote.addr}"
+                                                                   ^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'remote'
+2023-12-06 13:53:08,774 - INFO - 127.0.0.1 - - [06/Dec/2023 13:53:08] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2023-12-06 13:53:14,171 - INFO - 127.0.0.1 - - [06/Dec/2023 13:53:14] "GET / HTTP/1.1" 200 -
+2023-12-06 13:53:14,369 - INFO - 127.0.0.1 - - [06/Dec/2023 13:53:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 13:53:14,495 - INFO - 127.0.0.1 - - [06/Dec/2023 13:53:14] "[36mGET /static/images/baseball_spinning.gif HTTP/1.1[0m" 304 -
+2023-12-06 13:53:20,707 - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 72, in index
+    return handle_login()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py", line 156, in handle_login
+    log_message = f"Failed login attempt for: {username} from IP: {request.remote.addr}"
+                                                                   ^^^^^^^^^^^^^^
+AttributeError: 'Request' object has no attribute 'remote'
+2023-12-06 13:53:20,709 - INFO - 127.0.0.1 - - [06/Dec/2023 13:53:20] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2023-12-06 13:56:20,176 - ERROR - Failed login attempt for: nico from IP: 127.0.0.1
+2023-12-06 13:56:20,176 - INFO - 127.0.0.1 - - [06/Dec/2023 13:56:20] "[32mPOST / HTTP/1.1[0m" 302 -
+2023-12-06 13:56:20,181 - INFO - 127.0.0.1 - - [06/Dec/2023 13:56:20] "GET / HTTP/1.1" 200 -
+2023-12-06 13:56:20,200 - INFO - 127.0.0.1 - - [06/Dec/2023 13:56:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 13:56:20,519 - INFO - 127.0.0.1 - - [06/Dec/2023 13:56:20] "[36mGET /static/images/baseball_spinning.gif HTTP/1.1[0m" 304 -

@@ -1,0 +1,23 @@
+-- VERSION_5
+-- START DISKCACHE_3
+C:\Users\tscal\Desktop\UMGC\SDEV 300\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab5\com.python.pydev.analysis\v2_indexcache
+lab5.file_data_analysis|1700243086089620600|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab5\lab5\file_data_analysis.py
+lab5.__init__|1700931112268946000|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab5\lab5|^
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab5\lab5\file_data_analysis.py
+2=lab5.file_data_analysis
+-- END DICTIONARY
+-- START TREE 1
+6
+exi|1|exit_message!1^30#5*18@
+fil|1|file_menu!1^37#5*18@
+hou|1|housing_menu!1^67#5*18@
+mai|1|main!1^170#5*18@
+pop|1|pop_change_menu!1^120#5*18@
+wel|1|welcome_message!1^17#5*18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

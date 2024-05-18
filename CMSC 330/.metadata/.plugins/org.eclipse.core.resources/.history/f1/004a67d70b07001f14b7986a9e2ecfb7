@@ -1,0 +1,15 @@
+/*
+ * multiply.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+#ifndef MULTIPLY_H
+#define MULTIPLY_H
+
+#include "subexpression.h"
+
+class Multiply: public SubExpression{
+
+};
+#endif // MULTIPLY_H

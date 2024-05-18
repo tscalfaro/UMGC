@@ -1,0 +1,26 @@
+package application;
+
+public class Time implements Comparable<Time>{
+	private final int hours;
+	private final int minutes;
+	private final String meridian;
+	
+	public Time(int hours, int minutes, String meridian) {
+		try {
+			validateTime(hours, minutes, meridian);
+		} catch (InvalidTime e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.hours = hours;
+		this.minutes = minutes;
+		this.meridian = meridian;
+	}
+	
+	private void validateTime(int hours, int minutes, String meridian) throws InvalidTime {
+		if(hours < 1 || hours > 12 || minutes < 0 || minutes > 59 || 
+				(!meridian.equals("AM") && !meridian.equals("PM"))) {
+			throw new InvalidTime("Invalid Time Input");
+		}
+	}
+}

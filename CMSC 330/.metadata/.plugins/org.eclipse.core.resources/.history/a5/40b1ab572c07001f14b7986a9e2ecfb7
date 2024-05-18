@@ -1,0 +1,20 @@
+/*
+ * ternary.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef TERNARY_H_
+#define TERNARY_H_
+
+class Ternary: public SubExpression {
+public:
+	Ternary(Expression* left, Expression* right): SubExpression(left, right){
+		}
+		double evaluate(){
+			return (left->evaluate() != 0) ? left->evaluate() : right->evaluate();
+		}
+};
+
+#endif /* TERNARY_H_ */

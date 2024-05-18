@@ -1,0 +1,365 @@
+!SESSION 2024-04-02 13:09:38.059 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-02 13:10:15.578
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-02 13:10:43.002
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-04-02 13:10:47.848
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-04-02 13:10:47.848
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-02 13:10:55.767
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-04-03 12:34:07.574 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-03 12:34:37.381
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-03 12:34:45.881
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-04-03 12:34:48.679
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-04-03 12:34:48.679
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-03 12:34:53.952
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-04-30 09:37:00.924 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:38:10.151
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:38:20.141
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-04-30 09:38:23.566
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-04-30 09:38:23.566
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-30 09:38:32.379
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-04-30 09:44:22.841
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-04-30 09:44:22.841
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-04-30 09:44:22.841
+!MESSAGE org.eclipse.equinox.p2.iu; org.eclipse.linuxtools.callgraph.feature.feature.group [8.14.0.202403061658,8.14.0.202403061658] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-04-30 09:44:22.858
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-04-30 09:44:22.858
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-04-30 09:44:22.858
+!MESSAGE org.eclipse.equinox.p2.iu; org.eclipse.linuxtools.callgraph.feature.feature.group [8.14.0.202403061658,8.14.0.202403061658] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-04-30 09:44:22.877
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-04-30 09:44:22.877
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-04-30 09:44:22.877
+!MESSAGE org.eclipse.equinox.p2.iu; org.eclipse.linuxtools.callgraph.feature.feature.group [8.14.0.202403061658,8.14.0.202403061658] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2024-04-30 09:44:22.878
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-04-30 09:44:22.878
+!MESSAGE Cannot complete the install because some dependencies are not satisfiable
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-04-30 09:44:22.878
+!MESSAGE org.eclipse.equinox.p2.iu; org.eclipse.linuxtools.callgraph.feature.feature.group [8.14.0.202403061658,8.14.0.202403061658] cannot be installed in this environment because its filter is not applicable.
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2024-04-30 09:45:28.345
+!MESSAGE Exception saving preferences to: C:/Users/tscal/.p2/org.eclipse.equinox.p2.engine/profileRegistry/C__Users_tscal_eclipse_java-2023-06_eclipse.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+!STACK 0
+java.nio.file.FileAlreadyExistsException: C:\Users\tscal\.p2\org.eclipse.equinox.p2.engine\profileRegistry\C__Users_tscal_eclipse_java-2023-06_eclipse.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs.bak -> C:\Users\tscal\.p2\org.eclipse.equinox.p2.engine\profileRegistry\C__Users_tscal_eclipse_java-2023-06_eclipse.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:87)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:289)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1039)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:141)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:54)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2024-04-30 09:45:28.357
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Users/tscal/.p2/org.eclipse.equinox.p2.engine/profileRegistry/C__Users_tscal_eclipse_java-2023-06_eclipse.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:297)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1039)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:141)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:54)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.FileAlreadyExistsException: C:\Users\tscal\.p2\org.eclipse.equinox.p2.engine\profileRegistry\C__Users_tscal_eclipse_java-2023-06_eclipse.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs.bak -> C:\Users\tscal\.p2\org.eclipse.equinox.p2.engine\profileRegistry\C__Users_tscal_eclipse_java-2023-06_eclipse.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:87)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:403)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:293)
+	at java.base/java.nio.file.Files.move(Files.java:1432)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:289)
+	... 4 more
+!SESSION 2024-04-30 09:46:49.953 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:46:59.050
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:47:09.205
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-04-30 09:47:14.573
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-04-30 09:47:14.573
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-30 09:47:32.201
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-04-30 09:58:08.462 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:58:11.873
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-04-30 09:58:22.029
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-04-30 09:58:25.597
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-04-30 09:58:25.597
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-04-30 09:58:30.332
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-30 10:03:27.590
+!MESSAGE Indexed 'Project_2' (0 sources, 0 headers) in 0.006 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-30 10:55:40.530
+!MESSAGE Indexed 'project_2_CMSC330' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-30 11:14:16.320
+!MESSAGE Indexed 'project2' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 2 2 2024-05-01 13:20:22.668
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2024-05-01 13:20:22.668
+!MESSAGE The project description file (.project) for 'project2' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2024-05-01 13:32:21.094 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-01 13:32:52.867
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-01 13:32:56.693
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-05-01 13:32:59.302
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-01 13:32:59.302
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-01 13:33:05.468
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-01 13:39:06.239
+!MESSAGE Indexed 'project_2' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2024-05-06 14:18:04.482 -----------------------------------------------
+eclipse.buildId=4.30.0.20231201-1200
+java.version=17.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-06 14:18:34.643
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-06 14:19:00.501
+!MESSAGE Logback config file: C:\Users\tscal\Desktop\UMGC\CMSC 330\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.1.20231030-1438.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-05-06 14:19:03.202
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-05-06 14:19:03.202
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-06 14:19:09.807
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\tscal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

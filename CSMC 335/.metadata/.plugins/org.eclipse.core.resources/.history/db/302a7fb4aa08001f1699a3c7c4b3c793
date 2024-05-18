@@ -1,0 +1,17 @@
+package application;
+
+public class TrafficLight {
+	private TrafficLightState state;
+	
+	public TrafficLight() {
+		this.state = TrafficLightState.GREEN;
+	}
+	
+	public TrafficLightState getTrafficLightState() {
+		return state;
+	}
+	
+	public void setTrafficLightState(TrafficLightState state) {
+		this.state = state;
+	}
+}

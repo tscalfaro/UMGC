@@ -1,0 +1,16 @@
+/*
+ * ternary.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef TERNARY_H_
+#define TERNARY_H_
+
+class ternary {
+public:
+	ternary();
+};
+
+#endif /* TERNARY_H_ */

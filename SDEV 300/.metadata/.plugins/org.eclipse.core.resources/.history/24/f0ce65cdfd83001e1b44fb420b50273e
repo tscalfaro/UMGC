@@ -1,0 +1,70 @@
+'''
+Created on Nov 15, 2023
+
+@author: tscal
+Created by: Antonio Scalfaro
+SDEV 300 / 7381
+Lab 5 - Data Analysis
+This program ...
+'''
+
+def welcome_message():
+    """
+    Print welcome message with program and developer details
+    """
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 5 - Data Analysis")
+    print("This program ... ")
+    print("---------------------------------------------------------\n")
+
+def exit_message():
+    """
+    Print exit message
+    """
+    print("Thank you for using the Data Analysis program\n")
+    print("---------------------------------------------------------\n")
+
+def file_menu():
+    """
+    Print file menu and return selection, blank String if Exit
+    """
+    f = ""
+    while True:
+        print("Select the file you'd like to analyze")
+        print("1 - Population Data")
+        print("2 - Housing Data")
+        print("3 - Exit")
+        selection = input().strip()
+        try:
+            selection = int(selection)
+            if selection == 1:
+                f = "PopChange.csv"
+            elif selection == 2:
+                f = "Housing.csv"
+            elif selection == 3:
+                return f
+            else:
+                print("Selection not valid, try again.")
+                continue
+            return f
+        except ValueError as e:
+            print(f"Error: {e}. Please enter valid numeric input")
+    
+def main():
+    """
+    Main function to initiate program
+    """
+    welcome_message()
+    program_cont = True
+    while program_cont:
+        file_name = file_menu() #Get file name or empty string for exit
+        if len(file_name) == 0: #Exit option chosen
+            exit_message()
+            program_cont = False
+            continue
+        #file = open(file_name)
+        print(file_name)
+
+if __name__ == '__main__':
+    pass

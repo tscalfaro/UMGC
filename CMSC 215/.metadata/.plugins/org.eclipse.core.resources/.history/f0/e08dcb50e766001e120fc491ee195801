@@ -1,0 +1,14 @@
+package application;
+
+public class InvalidTime extends Exception {
+	private final String message;
+	
+	public InvalidTime(String message) {
+		this.message = message;
+	}
+	
+	@Override
+	public String getMessage() {
+		return message;
+	}
+}

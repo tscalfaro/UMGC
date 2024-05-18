@@ -1,0 +1,24 @@
+/*
+ * symboltableexception.h
+ *
+ *  Created on: May 1, 2024
+ *      Author: tscal
+ */
+
+#ifndef SYMBOLTABLEEXCEPTION_H_
+#define SYMBOLTABLEEXCEPTION_H_
+
+#include <exception>
+#include <string>
+
+class SymbolTableException : public std::exception {
+public:
+	explicit SymbolTableException(const std::string& message) : msg(message){}
+	virtual const char* errMessage() const noexcept override {
+		return msg.c_str();
+	}
+private:
+	std::string msg;
+};
+
+#endif /* SYMBOLTABLEEXCEPTION_H_ */

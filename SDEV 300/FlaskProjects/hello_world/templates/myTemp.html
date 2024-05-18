@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>New Template for Me!</title>
+</head>
+<body>
+	<nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        	<li><a href="{{ url_for('hello') }}">Hello</a></li>
+        	<li><a href="{{ url_for('hello', name='John') }}">Hello John</a></li>
+        	<li><a href="{{ url_for('myTemp')}}">My Temp</a></li>
+        </ul>
+    </nav>
+	<h1>New Template</h1>
+	<p>Sick new TEmplate</p>
+</body>
+</html>

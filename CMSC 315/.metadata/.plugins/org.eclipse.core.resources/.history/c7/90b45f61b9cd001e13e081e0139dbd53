@@ -1,0 +1,150 @@
+package project_3;
+import java.util.ArrayList;
+
+public class BinaryTree {
+	private TreeNode root;
+	
+	private static class TreeNode{
+		int val;
+		TreeNode left;
+		TreeNode right;
+		
+		public TreeNode(int val){
+			this.val = val;
+		}
+	}
+	
+	private TreeNode buildTree(String preorder) {
+		if (preorder == null || preorder.isEmpty() || preorder.charAt(0) != '(') {
+	        return null;
+	    }
+	    int rootValEnd = preorder.indexOf(' ');
+	    int rootVal = Integer.parseInt(preorder.substring(1, rootValEnd));
+	    TreeNode root = new TreeNode(rootVal);
+	    int leftSubtreeEnd = findMatchingParenthesis(preorder, rootValEnd + 1);
+	    root.left = buildTree(extractSubtree(preorder, rootValEnd + 1, leftSubtreeEnd));
+	    root.right = buildTree(extractSubtree(preorder, leftSubtreeEnd + 1, preorder.length() - 1));
+	    return root;
+	}
+
+	private int findSplitIndex(String preorder) {
+	    int count = 0;
+	    for (int i = 0; i < preorder.length(); i++) {
+	        char c = preorder.charAt(i);
+	        if (c == '(') {
+	            count++;
+	        } else if (c == ')') {
+	            count--;
+	        } else if (c == ' ' && count == 0) {
+	        	System.out.println(i);
+	            return i;
+	        }
+	    }
+	    return -1; // Split index not found
+	}
+
+	private String extractSubtree(String preorder, int splitIdx) {
+		System.out.println(preorder);
+	    if (splitIdx == 0) {
+	        return "";
+	    }
+	    int count = 0;
+	    int start = -1;
+	    for (int i = splitIdx; i < preorder.length(); i++) {
+	        char c = preorder.charAt(i);
+	        if (c == '(') {
+	            count++;
+	            if (start == -1) {
+	                start = i;
+	            }
+	        } else if (c == ')') {
+	            count--;
+	        }
+	        if (count == 0) {
+	            return preorder.substring(start, i + 1);
+	        }
+	    }
+	    return ""; // Subtree not found
+	}
+	
+	
+	private TreeNode buildBalancedTree(int[] values, int start, int end) {
+		if (start > end)
+			return null;
+		int mid = (start + end) / 2;
+		TreeNode node = new TreeNode(values[mid]);
+		node.left = buildBalancedTree(values, start, mid - 1);
+		node.right = buildBalancedTree(values, mid + 1, end);
+		return node;
+	}
+	
+	public BinaryTree(String preorder) {
+		this.root = buildTree(preorder);
+	}
+	
+	public BinaryTree(ArrayList<Integer> values) {
+		int[] valArr = new int[values.size()];
+		for(int i = 0; i < values.size(); i++)
+			valArr[i] = values.get(i);
+		this.root = buildBalancedTree(valArr, 0, valArr.length - 1);
+	}
+	
+	public void printIndented() {
+		printIndented(root, 0);
+	}
+	
+	public void printIndented(TreeNode node, int depth) {
+		if (node == null)
+			return;
+		for (int i = 0; i < depth; i++)
+			System.out.print("  ");
+		System.out.println(node.val);
+		printIndented(node.left, depth + 1);
+		printIndented(node.right, depth + 1);
+	}
+	
+	public int getHeight() {
+		return height(root);
+	}
+	
+	private int height(TreeNode node) {
+		if (node == null) {
+			return -1;
+		}
+		int leftHeight = height(node.left);
+		int rightHeight = height(node.right);
+		
+		return Math.max(leftHeight, rightHeight) + 1;
+	}
+	
+	public boolean isBalanced() {
+		return checkHeight(root) != -1;
+	}
+	
+	private int checkHeight(TreeNode node) {
+		if (node == null)
+			return 0;
+		int leftHeight = checkHeight(node.left);
+		if (leftHeight == -1)
+			return -1;
+		int rightHeight = checkHeight(node.right);
+		if (rightHeight == -1 || Math.abs(leftHeight - rightHeight) > 1)
+			return -1;
+		return Math.max(leftHeight, rightHeight) + 1;
+		
+	}
+	
+	public ArrayList<Integer> getValues() {
+		ArrayList<Integer> values = new ArrayList<>();
+		preOrderTraversal(root, values);
+		return values;
+	}
+	
+	public void preOrderTraversal(TreeNode node, ArrayList<Integer> values) {
+		if (node != null) {
+			values.add(node.val);
+			preOrderTraversal(node.left, values);
+			preOrderTraversal(node.right, values);
+		}
+	}
+}

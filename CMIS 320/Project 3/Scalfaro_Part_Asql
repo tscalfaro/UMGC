@@ -1,0 +1,59 @@
+CREATE TABLE Catalog (
+    Catalog_ID INTEGER PRIMARY KEY NOT NULL,
+    Movie_Titles VARCHAR2(4000)
+);
+
+CREATE TABLE Distributor (
+    Distributor_ID INTEGER PRIMARY KEY NOT NULL,
+    Relationship_Start DATE,
+    Catalog_ID INTEGER NOT NULL,
+    Name VARCHAR2(255) UNIQUE,
+    Country VARCHAR2(255),
+    FOREIGN KEY (Catalog_ID) REFERENCES Catalog(Catalog_ID)
+);
+
+CREATE TABLE Movie (
+    Movie_ID INTEGER PRIMARY KEY NOT NULL,
+    Distributor_ID INTEGER NOT NULL,
+    Title VARCHAR2(255) NOT NULL,
+    Duration INTEGER,
+    Rating VARCHAR2(6),
+    Movie_Format VARCHAR2(5),
+    Genre VARCHAR2(255),
+    Cast VARCHAR2(4000), 
+    Awards VARCHAR2(4000), 
+    FOREIGN KEY (Distributor_ID) REFERENCES Distributor(Distributor_ID)
+);
+
+CREATE TABLE Customer (
+    Customer_ID INTEGER PRIMARY KEY NOT NULL,
+    Account_Number INTEGER UNIQUE,
+    First_Name VARCHAR2(255),
+    Last_Name VARCHAR2(255),
+    Address VARCHAR2(4000)
+);
+
+CREATE TABLE Discount (
+    Discount_ID INTEGER PRIMARY KEY NOT NULL,
+    Name VARCHAR2(40) UNIQUE,
+    Discount_Amount NUMBER
+);
+
+CREATE TABLE Customer_Movie (
+    Movie_ID INTEGER NOT NULL,
+    Customer_ID INTEGER NOT NULL,
+    Date_Rented DATE NOT NULL,
+    Due_Date DATE,
+    Damage_Fee NUMBER,
+    Rewind_Fee NUMBER,
+    Standard_Fee NUMBER,
+    Late_Fee NUMBER,
+    Taxes NUMBER,
+    Discount_ID INTEGER NULL,
+    CONSTRAINT fk_customer_id
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
+    ON DELETE CASCADE,
+    FOREIGN KEY (Movie_ID) REFERENCES Movie(Movie_ID),
+    FOREIGN KEY (Discount_ID) REFERENCES Discount(Discount_ID)
+    
+);

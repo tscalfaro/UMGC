@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hello UMGC SDEV Student!</title>
+</head>
+<body>
+	<nav>
+       <ul>
+            <li><a href="/">Home</a></li>
+        	<li><a href="{{ url_for('hello') }}">Hello</a></li>
+        	<li><a href="{{ url_for('hello', name='John') }}">Hello John</a></li>
+			<li><a href="{{ url_for('myTemp') }}">My Temp</a></li>
+        </ul>
+    </nav>
+	{% if name %}
+	 <h1>Hello {{ name }}!</h1>
+	{% else %}
+	 <h1>Hello, World!</h1>
+	{% endif %}
+	<p>This is to test a paragraph</p>
+	<li>Now its a list</li>
+	<li>Numero dos</li>
+	<li>and Number 3</li>
+	<ol>Ordered list for me is new</ol>
+	<ol>this is 2 ... </ol>
+	<ol>and now for 3</ol>
+</body>
+</html>

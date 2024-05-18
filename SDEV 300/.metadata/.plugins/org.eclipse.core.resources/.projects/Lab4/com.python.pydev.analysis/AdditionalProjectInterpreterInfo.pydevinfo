@@ -1,0 +1,30 @@
+-- VERSION_5
+-- START DISKCACHE_3
+C:\Users\tscal\Desktop\UMGC\SDEV 300\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab4\com.python.pydev.analysis\v2_indexcache
+lab4.password_security|1699747612078293000|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab4\lab4\password_security.py
+lab4.__init__|1699742965692868000|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab4\lab4|^
+lab4.numpy_lab|1699806963697839400|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab4\lab4\numpy_lab.py
+-- END DISKCACHE
+-- START DICTIONARY
+4
+4=lab4.password_security
+3=C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab4\lab4\password_security.py
+1=C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab4\lab4\numpy_lab.py
+2=lab4.numpy_lab
+-- END DICTIONARY
+-- START TREE 1
+10
+col|1|column_mean!1^175#5*18@
+cre|1|create_matrix!1^92#5*18@
+ele|1|elem_by_elem_mult!1^149#5*18@
+exi|1|exit_menu!1^63#5*18@
+mai|2|main!3^9#5*34@main!1^204#5*18@
+mat|4|matrix_multiplication!1^141#5*18@matrix_subtraction!1^133#5*18@matrix_addition!1^125#5*18@matrix_menu!1^106#5*18@
+nea|1|neat_matrix!1^192#5*18@
+row|1|row_mean!1^158#5*18@
+val|2|validate_phone_number!1^70#5*18@validate_zip_code!1^81#5*18@
+wel|1|welcome_message!1^48#5*18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

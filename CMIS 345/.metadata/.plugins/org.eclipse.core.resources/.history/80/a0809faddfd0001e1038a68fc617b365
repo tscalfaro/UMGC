@@ -1,0 +1,68 @@
+package assignment_3;
+
+import java.util.Date;
+import java.util.UUID;
+
+public class Assert {
+
+	public static void assertEqualsDouble(double actual, double expected) {
+		
+		if (Double.compare(actual, expected) == 0) {
+			System.out.println("Actual: " + actual + " does match Expected: "
+		+ expected + " PASS");
+		}else {
+			System.out.println("Actual: " + actual + " does not match Expected: "
+		+ expected + " FAIL");
+		}
+	}
+	
+	public static void assertNotEqualsDouble(double actual, double expected) {
+		if (Double.compare(actual, expected) == 0) {
+			System.out.println("Actual: " + actual + " does match Expected: "
+		+ expected + " FAIL");
+		}else {
+			System.out.println("Actual: " + actual + " does not match Expected: "
+		+ expected + " PASS");
+		}
+	}
+	
+	public static void assertEqualsInt(int actual, int expected) {
+		
+	}
+	
+	public static void assertNotEqualsInt(int actual, int expected) {
+		
+	}
+	
+	public static void assertEqualsLong(long actual, long expected) {
+		
+	}
+	
+	public static void assertNotEqualsLong(long actual, long expected) {
+		
+	}
+	
+	public static void assertEqualsString(String actual, String expected) {
+		
+	}
+	
+	public static void assertNotEqualsString(String actual, String expected) {
+		
+	}
+	
+	public static void assertEqualsDate(Date actual, Date expected) {
+		
+	}
+	
+	public static void assertNotEqualsDate(Date actual, Date expected) {
+		
+	}
+	
+	public static void assertEqualsUUID(UUID actual, UUID expected) {
+		
+	}
+	
+	public static void assertNotEqualsUUID(UUID actual, UUID expected) {
+		
+	}
+}

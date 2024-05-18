@@ -1,0 +1,10 @@
+2023-12-06 15:26:05,195 - ERROR - Failed login attempt for: tony from IP: 127.0.0.1
+2023-12-06 15:26:05,196 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:05] "[32mPOST / HTTP/1.1[0m" 302 -
+2023-12-06 15:26:05,199 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:05] "GET / HTTP/1.1" 200 -
+2023-12-06 15:26:05,221 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 15:26:05,533 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:05] "[36mGET /static/images/baseball_spinning.gif HTTP/1.1[0m" 304 -
+2023-12-06 15:26:14,831 - ERROR - Failed login attempt for: tony from IP: 127.0.0.1
+2023-12-06 15:26:14,832 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:14] "[32mPOST / HTTP/1.1[0m" 302 -
+2023-12-06 15:26:14,836 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:14] "GET / HTTP/1.1" 200 -
+2023-12-06 15:26:14,857 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2023-12-06 15:26:15,177 - INFO - 127.0.0.1 - - [06/Dec/2023 15:26:15] "[36mGET /static/images/baseball_spinning.gif HTTP/1.1[0m" 304 -

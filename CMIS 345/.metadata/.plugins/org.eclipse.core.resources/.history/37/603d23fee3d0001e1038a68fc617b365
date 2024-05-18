@@ -1,0 +1,39 @@
+package assignment_3;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class TestReservatioin {
+
+	private static String datePattern = "MMM dd, yyyy";
+	private static SimpleDateFormat sdf = new SimpleDateFormat(datePattern);
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		testConstructorAndGetters();
+	}
+	
+	public static void testConstructorAndGetters() {
+		
+		System.out.println();
+		System.out.println("Testing Constructor and Getters");
+		System.out.println("----------------------------------------");
+		Reservation r = new Reservation(1, "RoomWBath", "Jun 16, 2022", "Jun 19, 2022");
+		Reservation r2 = new Reservation(7, "RoomWBath", "Jun 16, 2022", "Jun 19, 2022");
+		Assert.assertNotEqualsUUID(r.getReservationID(), r2.getReservationID());
+		Assert.assertEqualsDate(r.getReservationDate(), new Date());
+		Assert.assertEqualsInt(r.getGuestID(), 1);
+		Assert.assertNotEqualsInt(r.getGuestID(), r2.getGuestID());
+		Assert.assertEqualsString(r.getRoomType(), r2.getRoomType());
+		Assert.assertEqualsString(r.getReservationStartDate(), r2.getReservationStartDate());
+		Assert.assertEqualsString(r.getReservationEndDate(), r2.getReservationEndDate());
+	}
+	
+	public static void testReservationNumberOfDays() {
+		
+		System.out.println();
+		System.out.println("Testing Calculate Reservation Number of Days");
+		System.out.println("----------------------------------------");
+	}
+
+}

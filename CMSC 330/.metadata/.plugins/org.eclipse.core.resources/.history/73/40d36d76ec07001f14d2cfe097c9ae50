@@ -1,0 +1,22 @@
+/*
+ * uninitializedvariableexception.h
+ *
+ *  Created on: May 1, 2024
+ *      Author: tscal
+ */
+
+#ifndef UNINITIALIZEDVARIABLEEXCEPTION_H_
+#define UNINITIALIZEDVARIABLEEXCEPTION_H_
+
+#include <exception>
+#include <string>
+#include "symboltableexception.h"
+
+class UninitializedVariableException : public SymbolTableException {
+public:
+    explicit UninitializedVariableException(const std::string& variable)
+        : SymbolTableException("Variable '" + variable + "' is not initialized") {}
+};
+
+
+#endif /* UNINITIALIZEDVARIABLEEXCEPTION_H_ */

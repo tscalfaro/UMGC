@@ -1,0 +1,40 @@
+package application;
+
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+
+public class Lane extends Pane {
+	private Rectangle lane;
+	private Circle light;
+	private Color lightColor = Color.RED;
+	private double width = 200;
+	private double height = 500;
+	
+	public Lane() {
+		setPrefSize(width, height);
+		lane = new Rectangle(width, height, Color.BLACK);
+		lane.setStroke(Color.YELLOW);Y
+		lane.setFill(Color.BLACK);
+		light = new Circle(width / 2, height / 4, height / 8, lightColor);
+		light.setStroke(Color.BLACK);
+		getChildren().addAll(lane, light);
+	}
+	
+	public void changeLightColor(){
+		if (lightColor == Color.RED) {
+			lightColor = Color.GREEN;
+		} else if (lightColor == Color.GREEN) {
+			lightColor = Color.YELLOW;
+		} else {
+			lightColor = Color.RED;
+		}
+	}
+	
+	public void addCar(Car car) {
+		car.setLayoutX(width / 2 - car.getWidth() / 2);
+		car.setLayoutY(height - car.getHeight() - 5);
+		getChildren().add(car);
+	}
+}

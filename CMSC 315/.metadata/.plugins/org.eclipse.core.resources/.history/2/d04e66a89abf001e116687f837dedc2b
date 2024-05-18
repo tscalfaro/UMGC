@@ -1,0 +1,36 @@
+package project2;
+
+public class Point implements Comparable<Point> {
+
+	private double x = 0.0;
+	private double y = 0.0;
+	
+	//Constructor for Point
+	public Point(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	//Return x-coordinate
+	public double getX() {
+		return x;
+	}
+	
+	//Return y-coordinate
+	public double getY() {
+		return y;
+	}
+	
+	//Check if this Point is maximal compare to given Point p
+	//i.e given point p x-coordinate is left of this Point and 
+	//y-coordinate is below this Point
+	public boolean maximalPoint(Point p) {
+		return this.y < p.getY() && this.x < p.getX();
+	}
+	
+	@Override
+	public int compareTo(Point p) {
+		return Double.compare(this.x, p.getX());
+	}
+}
+

@@ -1,0 +1,16 @@
+/*
+ * multiply.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef MULTIPLY_H_
+#define MULTIPLY_H_
+
+class multiply {
+public:
+	multiply();
+};
+
+#endif /* MULTIPLY_H_ */

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="landing-page">
+	    <section class="landing-section-1">
+	        <h3>Portfolio</h3>
+	        <h1>Leah<br>Scalfaro</h1>
+	        <section class="landing-section-1-bottom">
+				<h3 style="margin-top: 20px;">Marketing Professional</h3>
+				<a href="mailto:leahscalfaro@gmail.com">Email Me</a>
+				</section>
+	    </section>
+	
+	    <section class="landing-section-2"></section>
+	</div>
+	<div class="bio-page">
+		<section class="bio-section-1">
+			<h3>BIO</h3>
+			<div class="bio-img-div"></div>
+		</section>
+		<section class="bio-section-2">
+			<h2>I am a creative project manager + marketing professional</h2>
+			<p>I thrive in a fast-paced collaborative environment, where I excel in my ability
+				to deliver results and exceed client expectations.
+			</p>
+			<p>With my strong work ethic, strategic thinking, and dedication to achieving 
+				marketing goals, I believe I would be a valuable asset to any marketing team.
+			</p>
+		</section>
+	</div>
+	<div clas="background-page">
+		<section class="background-section-1"></section>
+		<section class="background-section-2"></section>
+		<section class="background-section-3"></section>
+	</div>
+{% endblock %}

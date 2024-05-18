@@ -1,0 +1,139 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.application.Platform;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+
+public class Lane extends Pane implements Runnable{
+	private Rectangle lane;
+	private Circle light;
+	private Color lightColor = Color.GREEN;
+	private double width = 200;
+	private double height = 600;
+	private List<Car> cars;
+	private TrafficLight trafficLight;
+	private boolean stop = false;
+	
+	public Lane() {
+		this.trafficLight = new TrafficLight();
+		this.cars = new ArrayList<>();
+		initializeGUI();
+	}
+	
+	public void initializeGUI() {
+		setPrefSize(width, height);
+		lane = new Rectangle(width, height, Color.BLACK);
+		lane.setStroke(Color.YELLOW);
+		lane.setFill(Color.BLACK);
+		light = new Circle(width / 2, height / 8, height / 16, lightColor);
+		light.setStroke(Color.BLACK);
+		getChildren().addAll(lane, light);
+	}
+	
+	synchronized void changeLightColor(){
+		if (trafficLight.getTrafficLightState() == TrafficLightState.RED) {
+			lightColor = Color.GREEN;
+			light.setFill(lightColor);
+			trafficLight.setTrafficLightState(TrafficLightState.GREEN);
+		} else if (trafficLight.getTrafficLightState() == TrafficLightState.GREEN) {
+			lightColor = Color.YELLOW;
+			light.setFill(lightColor);
+			trafficLight.setTrafficLightState(TrafficLightState.YELLOW);
+		} else {
+			lightColor = Color.RED;
+			light.setFill(lightColor);
+			trafficLight.setTrafficLightState(TrafficLightState.RED);
+		}
+	}
+	
+	synchronized void addCar(Car car) {
+		if (cars.size() > 3) {
+			return;
+		}
+		car.setXPos((int) (width / 2 - car.getWidth() / 2));
+		car.setYPos((int) (height - car.getHeight() - 5));
+		car.setLayoutX(car.getXPos());
+		car.setLayoutY(car.getYPos());
+		cars.add(car);
+		getChildren().add(car);
+	}
+
+	@Override
+	public void run() {
+		while (!Thread.currentThread().isInterrupted()) {
+            try {
+                switch(trafficLight.getTrafficLightState()) {
+                case GREEN:
+                	if (!stop) {
+                		moveCars();
+                    	Thread.sleep(3000);
+                    	changeLightColor();
+                	} else {
+                		Thread.sleep(1000);
+                	}
+                	break;
+                case YELLOW:
+                	if (!stop) {
+                		moveCars();
+                    	Thread.sleep(3000);
+                    	changeLightColor();
+                	} else {
+                		Thread.sleep(1000);
+                	}
+                	break;
+                case RED:
+                	if (!stop) {
+                		Thread.sleep(4000);
+                    	changeLightColor();
+                	} else {
+                		Thread.sleep(1000);
+                	}
+                	break;
+                }
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                stop = true;
+            }
+            
+        }
+	}
+	
+	synchronized void moveCars() {
+		if (!cars.isEmpty()) {
+			List<Car> carsToRemove = new ArrayList<>();
+	        for (Car car : cars) {
+	            int newY = (int) (car.getYPos() - car.getSpeed()); // Calculate new y-position based on speed
+	            if (newY < 100) {
+	            	carsToRemove.add(car);
+	            } else {
+	            	car.setYPos(newY); // Update car's y-position
+		            car.setLayoutY(car.getYPos());
+		            System.out.println("New pos " + car.getYPos());
+	            }
+	        }
+	        Platform.runLater(() -> {
+	            for (Car carToRemove : carsToRemove) {
+	                getChildren().remove(carToRemove);
+	                cars.remove(carToRemove);
+	            }
+	        });
+	    }
+    }
+
+    synchronized void stopCars() {
+        // Stop cars
+    }
+    
+    public void pause() {
+    	stop = true;
+    }
+    
+    public void resume() {
+    	stop = false;
+    }
+}

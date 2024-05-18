@@ -1,0 +1,27 @@
+-- VERSION_5
+-- START DISKCACHE_3
+C:\Users\tscal\Desktop\UMGC\SDEV 300\.metadata\.plugins\org.eclipse.core.resources\.projects\Lab6\com.python.pydev.analysis\v2_indexcache
+lab6.app|1701894873298400000|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py
+lab6.__init__|1700855375613077900|C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+2
+1=C:\Users\tscal\Desktop\UMGC\SDEV 300\Lab6\lab6\app.py
+2=lab6.app
+-- END DICTIONARY
+-- START TREE 1
+10
+app|1|app!1^82#1*19@
+che|3|check_credentials!1^297#5*18@check_common_pass!1^224#5*18@check_pass!1^198#5*18@
+gen|1|generate_salt!1^282#5*18@
+han|2|handle_registration!1^157#5*18@handle_login!1^176#5*18@
+ind|1|index!1^97#5*18@
+log|1|login_required!1^85#5*18@
+sho|7|show_harper!1^153#5*18@show_trout!1^147#5*18@show_login!1^106#5*18@show_update_password!1^123#5*18@show_register!1^112#5*18@show_utley!1^141#5*18@show_home!1^133#5*18@
+sto|1|store_credentials!1^286#5*18@
+upd|1|update_password!1^243#5*18@
+use|1|username_exists!1^234#5*18@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\tscal\Desktop\UMGC\CMIS 345\.metadata\.plugins\org.eclipse.jdt.core
+2656381290.index
+1031218492.index
+1260441451.index
+1865797976.index

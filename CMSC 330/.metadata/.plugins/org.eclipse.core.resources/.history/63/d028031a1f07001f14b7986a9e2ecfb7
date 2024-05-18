@@ -1,0 +1,21 @@
+/*
+ * exponent.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef EXPONENT_H_
+#define EXPONENT_H_
+
+class Exponent: public SubExpression {
+	Exponent(Expression* left, Expression* right): SubExpression(left, right){
+		}
+		double evaluate() {
+		       return left->evaluate() ^ right->evaluate();
+		    }
+};
+
+
+
+#endif /* EXPONENT_H_ */

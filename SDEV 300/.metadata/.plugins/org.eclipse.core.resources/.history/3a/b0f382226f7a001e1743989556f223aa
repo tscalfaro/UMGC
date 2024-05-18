@@ -1,0 +1,31 @@
+'''
+Created on Nov 3, 2023
+
+@author: tscal
+'''
+
+def welcome_message():
+    """
+    Welcome message to user, contains developer and program details
+    """
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 3 - States Information")
+    print("This program allows the user to look up information on states: " +
+          "their capital, population, and state flower. When searching by a " +
+          "singular state, you can get that information plus an image of the " +
+          "state flower. The user can see a bar graph of the 5 most populated " +
+          "states. Lastly, a user can edit the population of a state.")
+def exit_menu():
+    print("Thank you for using the States Information Application. Goodbye.\n")
+def main():
+    welcome_message()
+    switch_dict = {
+        "1": display_all,
+        "2": find_one,
+        "3": bar_graph,
+        "4": update_pop,
+        "5": exit_menu
+        }
+if __name__ == '__main__':
+    pass

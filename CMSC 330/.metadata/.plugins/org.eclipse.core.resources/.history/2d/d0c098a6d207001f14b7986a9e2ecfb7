@@ -1,0 +1,100 @@
+// CMSC 330 Advanced Programming Languages
+// Project 2 Skeleton
+// UMGC CITE
+// Spring 2023
+
+// This file contains the body of the functions contained in The SubExpression class, which includes
+// the constructor that initializes the left and right subexpressions and the static function parse
+// parses the subexpression. Addition and subtraction are the two operators that are implemented.
+
+/* Edited by: Antonio Scalfaro
+ * 04/30/2024
+ * Added additional cases to switch statement to handle expanded grammar.
+ * */
+
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+#include "expression.h"
+#include "subexpression.h"
+#include "operand.h"
+#include "plus.h"
+#include "minus.h"
+#include "multiply.h"
+#include "negate.h"
+#include "divide.h"
+#include "exponent.h"
+#include "maximum.h"
+#include "minimum.h"
+#include "average.h"
+#include "ternary.h"
+#include "quarternary.h"
+
+SubExpression::SubExpression(Expression* left, Expression* right) {
+    this->left = left;
+    this->right = right;
+}
+
+Expression* SubExpression::parse(stringstream& in) {
+    Expression* left;
+    Expression* middle;
+    Expression* middleRight;
+    Expression* right;
+    char operation, paren;
+    
+    left = Operand::parse(in);
+    in >> operation;
+
+    switch (operation) {
+        case '+':
+        	right = Operand::parse(in);
+        	in >> paren;
+            return new Plus(left, right);
+        case '-':
+        	right = Operand::parse(in);
+        	in >> paren;
+            return new Minus(left, right);
+        case '*':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Multiply(left, right);
+        case '~':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Negate(left);
+        case '/':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Divide(left, right);
+        case '^':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Exponent(left, right);
+        case '>':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Maximum(left, right);
+        case '<':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Minimum(left, right);
+        case '&':
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Average(left, right);
+        case '?':
+        	middle = Operand::parse(in);
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Ternary(left, middle, right);
+        case '#':
+        	middle = Operand::parse(in);
+        	middleRight = Operand::parse(in);
+        	right = Operand::parse(in);
+        	in >> paren;
+        	return new Quarternary(left, middle, middleRight, right);
+    }
+    return 0;
+}
+        

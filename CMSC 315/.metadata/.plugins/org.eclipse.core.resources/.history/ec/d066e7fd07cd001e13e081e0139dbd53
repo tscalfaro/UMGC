@@ -1,0 +1,46 @@
+package project_3;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main (String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Would you like to create a BST? Y/N");
+		String line = scan.nextLine();
+		char c;
+		
+		while(!line.isEmpty()) {
+			line.toUpperCase();
+			c = line.charAt(0);
+			
+			if (c == 'Y') {
+				menuLoop(c, scan);
+			}
+		}
+		
+	}
+	
+	public static void menuLoop(char c, Scanner scan) {
+		
+		scan.nextLine();
+		try {
+			System.out.println("Input the BST in the form indicated above");
+			String bstString = scan.nextLine().trim();
+			
+			InvalidInputException.validatePreOrderString(bstString);
+			
+			BinaryTree bst = new BinaryTree(bstString);
+			System.out.println("Your BST:");
+			bst.printIndented();
+			
+			if (bst.isBalanced()) {
+				System.out.println("This BST is balanced");
+			}
+			
+		} catch (InvalidInputException e) {
+			System.out.println("Error " + e.getMessage());
+		}
+	}
+}

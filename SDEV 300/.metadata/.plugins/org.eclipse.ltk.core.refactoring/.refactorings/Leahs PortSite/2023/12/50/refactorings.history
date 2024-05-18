@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Leahs PortSite/sitepkg/static/fonts/Black Mango Black.ttf&apos; to &apos;black-mango-black.ttf&apos;" description="Rename resource &apos;Black Mango Black.ttf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sitepkg/static/fonts/Black Mango Black.ttf" name="black-mango-black.ttf" stamp="1702415467634" updateReferences="true"/>
+</session>

@@ -1,0 +1,76 @@
+package application;
+
+public class Time implements Comparable<Time>{
+	private final int hours;
+	private final int minutes;
+	private final String meridian;
+	
+	public Time(int hours, int minutes, String meridian) {
+		try {
+			validateTime(hours, minutes, meridian);
+		} catch (InvalidTime e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.hours = hours;
+		this.minutes = minutes;
+		this.meridian = meridian;
+	}
+	
+	public Time(String timeString) throws InvalidTime {
+		String[] parts = timeString.split(" ");
+		if(parts.length != 2) {
+			throw new InvalidTime("Invalid Time Format");
+		}
+		
+		String[] timeParts = parts[0].split(":");
+		if(timeParts.length != 2) {
+			throw new InvalidTime("Invalid Time Format");
+		}
+		
+		try {
+			this.hours = Integer.parseInt(timeParts[0]);
+			this.minutes = Integer.parseInt(timeParts[1]);
+		}catch(NumberFormatException e) {
+			throw new InvalidTime("Invalid numeric value for hours or minutes");
+		}
+		
+		validateTime(hours, minutes, parts[1]);
+		this.meridian = parts[1];
+	}
+	
+	public int getHours() {
+		return hours;
+	}
+	
+	public int getMinutes() {
+		return minutes;
+	}
+	
+	public String getMeridian() {
+		return meridian;
+	}
+	
+	@Override
+	public int compareTo(Time other) {
+		if (this.meridian.equals("AM") && other.meridian.equals("PM")) {
+            return -1;
+        } else if (this.meridian.equals("PM") && other.meridian.equals("AM")) {
+            return 1;
+        } else {
+            if (this.hours != other.hours) {
+                return Integer.compare(this.hours, other.hours);
+            } else {
+                return Integer.compare(this.minutes, other.minutes);
+            }
+        }
+	}
+	
+	
+	private void validateTime(int hours, int minutes, String meridian) throws InvalidTime {
+		if(hours < 1 || hours > 12 || minutes < 0 || minutes > 59 || 
+				(!meridian.equals("AM") && !meridian.equals("PM"))) {
+			throw new InvalidTime("Invalid Time Input");
+		}
+	}
+}

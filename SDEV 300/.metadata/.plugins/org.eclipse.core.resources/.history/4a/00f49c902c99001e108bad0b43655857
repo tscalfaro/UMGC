@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="landing-page">
+	
+    <section id="section1">
+        <!-- Content for the first section -->
+        <h3>Section</h3>
+    </section>
+
+    <section id="section2">
+        <!-- Content for the second section -->
+        <h3>Section 2</h3>
+    </section>
+	</div>
+    <!-- Repeat for other sections... -->
+
+{% endblock %}

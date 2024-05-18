@@ -1,0 +1,54 @@
+package application;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Project4_UnitTest {
+
+	@Test
+	public void testInterval() {
+		Interval t = new Interval(1200, 1400); // control interval
+		int time = 1300; // time within control interval
+		Interval t2 = new Interval(1203, 1350); // fully within interval
+		Interval t3 = new Interval(1000, 1158); // fully outside interval
+		Interval t4 = new Interval(1330, 1530); // overlap interval
+		
+		boolean a = t.within(time);
+		boolean b = t.subinterval(t2);
+		boolean c = t.overlaps(t4);
+		boolean d = t.overlaps(t3);
+		
+		assertEquals(true, a);
+		assertEquals(true, b);
+		assertEquals(true, c);
+		assertEquals(false, d);
+		
+	}
+	
+	@Test
+	public void testTimeToString() throws InvalidTime {
+		Time t = new Time("12:03 PM"); // String constructor
+		Time t2 = new Time(3, 58, "AM"); // int, int, String constructor
+		assertThrows(InvalidTime.class, () -> {
+			new Time(0, 61, "AM"); //Invalid time
+		});
+		
+		String a = t.toString();
+		String b = t2.toString();
+		
+		assertEquals("12:03 PM", a);
+		assertEquals("03:58 AM", b);	
+	}
+	
+	@Test
+	public void testTimeCompareTo() throws InvalidTime {
+		Time t = new Time("12:03 PM");
+		Time t2 = new Time("12:03 AM");
+		Time t3 = new Time(12, 03, "PM");
+		
+		assertEquals(1, t.compareTo(t2));
+		assertEquals(-1, t2.compareTo(t));
+		assertEquals(0, t.compareTo(t3));
+	}
+}

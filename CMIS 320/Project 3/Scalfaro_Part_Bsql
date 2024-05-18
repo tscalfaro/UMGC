@@ -1,0 +1,74 @@
+INSERT INTO Catalog (Catalog_ID, Movie_Titles) 
+VALUES (1, 'Encanto, Brave, Toy Story, Hercules, Wicked');
+INSERT INTO Catalog (Catalog_ID, Movie_Titles) 
+VALUES (2, 'Shooter, Ted, Ted 2, Scary Movie, Step-Brothers');
+INSERT INTO Catalog (Catalog_ID, Movie_Titles) 
+VALUES (3, 'Wish, Click, Happy Gilmore, Hell or High Water, Lion King');
+INSERT INTO Catalog (Catalog_ID, Movie_Titles) 
+VALUES (4, 'Annie, Airplane!, Airplanes II: The Sequel, Snow White, Gone Girl');
+INSERT INTO Catalog (Catalog_ID, Movie_Titles) 
+VALUES (5, 'This is the End, Inception, Titanic, Wolf of Wall Street, Tarzan');
+
+INSERT INTO Distributor (Distributor_ID, Relationship_Start, Catalog_ID, Name, Country) 
+VALUES (1, DATE '2023-01-15', 1, 'ABC Distributors', 'USA');
+INSERT INTO Distributor (Distributor_ID, Relationship_Start, Catalog_ID, Name, Country) 
+VALUES (2, DATE '2003-03-10', 2, 'Delaware Distributors', 'USA');
+INSERT INTO Distributor (Distributor_ID, Relationship_Start, Catalog_ID, Name, Country) 
+VALUES (3, DATE '2007-04-23', 3, 'Tricounty Distributors', 'USA');
+INSERT INTO Distributor (Distributor_ID, Relationship_Start, Catalog_ID, Name, Country) 
+VALUES (4, DATE '2020-08-03', 4, 'Movies Galore Distributors', 'CHINA');
+INSERT INTO Distributor (Distributor_ID, Relationship_Start, Catalog_ID, Name, Country) 
+VALUES (5, DATE '2009-11-28', 5, 'Everything Videos Distributors', 'USA');
+
+INSERT INTO Movie (Movie_ID, Distributor_ID, Title, Duration, Rating, Movie_Format, Genre, Cast, Awards)
+VALUES (1, 1, 'Encanto', 102, 'PG', 'DVD', 'Animated', 'Stephanie Beatriz, John Liquizamo', 'Best Animated Feature Film');
+INSERT INTO Movie (Movie_ID, Distributor_ID, Title, Duration, Rating, Movie_Format, Genre, Cast, Awards)
+VALUES (2, 5, 'Inception', 148, 'PG-13', 'DVD', 'Action', 'Leonardo DiCaprio, Joseph Gordon-Levitt', 'Best Visual Effects');
+INSERT INTO Movie (Movie_ID, Distributor_ID, Title, Duration, Rating, Movie_Format, Genre, Cast, Awards)
+VALUES (3, 2, 'Ted', 106, 'R', 'DVD', 'Comedy', 'Mark Wahlberg, Mila Kunis', NULL);
+INSERT INTO Movie (Movie_ID, Distributor_ID, Title, Duration, Rating, Movie_Format, Genre, Cast, Awards)
+VALUES (4, 3, 'Happy Gilmore', 93, 'PG-13', 'Video', 'Comedy', 'Adam Sandler, Carl Weathers', NULL);
+INSERT INTO Movie (Movie_ID, Distributor_ID, Title, Duration, Rating, Movie_Format, Genre, Cast, Awards)
+VALUES (5, 4, 'Airplane!', 88, 'PG', 'Video', 'Comedy', 'Leslie Nielsen, Julie Hagerty', NULL);
+
+INSERT INTO Customer (Customer_ID, Account_Number, First_Name, Last_Name, Address)
+VALUES (1, 101, 'Joe', 'Doe', '123 This Way, Archdale, PA');
+INSERT INTO Customer (Customer_ID, Account_Number, First_Name, Last_Name, Address)
+VALUES (2, 203, 'Jane', 'Maiden', '123 This Way, Archdale, PA');
+INSERT INTO Customer (Customer_ID, Account_Number, First_Name, Last_Name, Address)
+VALUES (3, 093, 'Jerry', 'White', '476 Anchor Street, Archdale, PA');
+INSERT INTO Customer (Customer_ID, Account_Number, First_Name, Last_Name, Address)
+VALUES (4, 321, 'Jill', 'Smith', '17 Donald Drive, Media, PA');
+INSERT INTO Customer (Customer_ID, Account_Number, First_Name, Last_Name, Address)
+VALUES (5, 168, 'Archie', 'Manning', '567 Quiet Hill Road, Lancaster, PA');
+
+INSERT INTO Discount (Discount_ID, Name, Discount_Amount)
+VALUES (1, 'Senior', 0.10);
+INSERT INTO Discount (Discount_ID, Name, Discount_Amount)
+VALUES (2, 'Military', 0.15);
+INSERT INTO Discount (Discount_ID, Name, Discount_Amount)
+VALUES (3, 'Holiday', 0.10);
+INSERT INTO Discount (Discount_ID, Name, Discount_Amount)
+VALUES (4, 'Local', 0.05);
+INSERT INTO Discount (Discount_ID, Name, Discount_Amount)
+VALUES (5, 'Police/Fire', 0.15);
+
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (1, 5, DATE '2023-03-10', DATE '2023-03-19', 5.99, 0.0, 5.99, 2.0, 0.5, NULL);
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (4, 3, DATE '2024-01-20', DATE '2024-01-29', 0.0, 1.5, 5.99, 0.0, 0.5, 1);
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (2, 1, DATE '2023-08-05', DATE '2023-08-14', 0.0, 0.0, 5.99, 0.0, 0.5, 5);
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (5, 2, DATE '2024-02-01', DATE '2024-02-10', 0.0, 0.0, 5.99, 2.0, 0.5, 4);
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (3, 4, DATE '2024-01-02', DATE '2024-01-11', 0.0, 1.5, 5.99, 0.0, 0.5, NULL);
+INSERT INTO Customer_Movie (Movie_ID, Customer_ID, Date_Rented, Due_Date, Damage_Fee, Rewind_Fee, Standard_Fee, Late_Fee, Taxes, Discount_ID) 
+VALUES (1, 2, DATE '2024-02-01', DATE '2024-02-10', 0.0, 0.0, 5.99, 2.0, 0.5, 4);
+
+SELECT * FROM CATALOG;
+SELECT * FROM DISTRIBUTOR;
+SELECT * FROM MOVIE;
+SELECT * FROM CUSTOMER;
+SELECT * FROM DISCOUNT;
+SELECT * FROM CUSTOMER_MOVIE;

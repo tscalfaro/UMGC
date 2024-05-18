@@ -1,0 +1,25 @@
+14:47:53 **** Clean-only build of configuration Debug for project project_2 ****
+rm -rf operand.d parse.d operand.o variable.o subexpression.d project2.o variable.d project2.d subexpression.o project_2.exe symboltable.o symboltable.d parse.o 
+rm: cannot remove `project_2.exe': Permission denied
+14:47:57 **** Rebuild of configuration Debug for project project_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o parse.o "..\\parse.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o symboltable.o "..\\symboltable.cpp" 
+..\symboltable.cpp: In member function 'double SymbolTable::lookUp(std::__cxx11::string) const':
+..\symboltable.cpp:26:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < elements.size(); i++)
+                     ~~^~~~~~~~~~~~~~~~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o variable.o "..\\variable.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o operand.o "..\\operand.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o "..\\project2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o subexpression.o "..\\subexpression.cpp" 
+g++ -o project_2.exe operand.o parse.o project2.o subexpression.o symboltable.o variable.o 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file project_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:22:27 **** Incremental Build of configuration Debug for project project_2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o "..\\project2.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o variable.o "..\\variable.cpp" 
+g++ -o project_2.exe operand.o parse.o project2.o subexpression.o symboltable.o variable.o 
+Info: Nothing to build for project_2
+Info: Nothing to build for project_2

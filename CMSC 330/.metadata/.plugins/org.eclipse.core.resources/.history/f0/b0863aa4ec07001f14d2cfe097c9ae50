@@ -1,0 +1,22 @@
+/*
+ * duplicatevariableexception.h
+ *
+ *  Created on: May 1, 2024
+ *      Author: tscal
+ */
+
+#ifndef DUPLICATEVARIABLEEXCEPTION_H_
+#define DUPLICATEVARIABLEEXCEPTION_H_
+
+#include <exception>
+#include <string>
+#include "symboltableexception.h"
+
+class DuplicateVariableException : public SymbolTableException {
+public:
+    explicit DuplicateVariableException(const std::string& variable)
+        : SymbolTableException("Variable '" + variable + "' is initialized twice") {}
+};
+
+
+#endif /* DUPLICATEVARIABLEEXCEPTION_H_ */

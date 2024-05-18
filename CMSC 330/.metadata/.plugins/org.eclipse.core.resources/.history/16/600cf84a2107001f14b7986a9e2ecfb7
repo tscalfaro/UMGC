@@ -1,0 +1,22 @@
+/*
+ * minimum.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef MINIMUM_H_
+#define MINIMUM_H_
+
+class Minimum: public SubExpression{
+public:
+	Minimum(Expression* left, Expression* right): SubExpression(left, right){
+		}
+		double evaluate() {
+		       return (left->evaluate() > right->evaluate()) ? left->evaluate() : right->evaluate();
+		    }
+};
+
+
+
+#endif /* MINIMUM_H_ */

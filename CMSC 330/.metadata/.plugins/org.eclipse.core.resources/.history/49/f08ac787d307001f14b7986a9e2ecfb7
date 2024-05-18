@@ -1,0 +1,23 @@
+/*
+ * remainder.h
+ *
+ *  Created on: May 1, 2024
+ *      Author: tscal
+ */
+
+#ifndef REMAINDER_H_
+#define REMAINDER_H_
+
+class Remainder: public SubExpression {
+public:
+	Remainder(Expression* left, Expression* right) : SubExpression(left, right){
+
+	}
+	double evaluate(){
+		return left->evaluate() % right->evaluate();
+	}
+};
+
+
+
+#endif /* REMAINDER_H_ */

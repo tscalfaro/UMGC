@@ -1,0 +1,20 @@
+package application;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
+public class Car extends Rectangle{
+	private int speed;
+	
+	public Car(int width, int height, int speed) {
+		super(width, height, Color.DARKSLATEBLUE);
+		this.speed = speed;
+	}
+	
+	public int getSpeed() {
+		return speed;
+	}
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+}

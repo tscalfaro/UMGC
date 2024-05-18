@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Update Password</title>
+</head>
+<body>
+	<nav>
+        <ul class="horizontal-list">
+            <li class="navBar"><a href="/home">Home</a></li>
+        	<li class="navBar"><a href="/utley">Chase Utley</a></li>
+       		<li class="navBar"><a href="/harper">Bryce Harper</a></li>
+        </ul>
+    </nav>
+	<div>
+		<form>
+			<label for="update-password-username">Username:</label>
+			<input type="text" id="update-password-username" name="username" required>
+			
+			<label for="old-password">Old Password:</label>
+            <input type="password" id="old-password" name="old-password" required>
+            
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required>
+			
+			<button class="update-password-button" type="submit">Update Password</button>
+		</form>
+	</div>
+</body>
+</html>

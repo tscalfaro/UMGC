@@ -1,0 +1,22 @@
+/*
+ * maximum.h
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#ifndef MAXIMUM_H_
+#define MAXIMUM_H_
+
+class Maximum: public SubExpression{
+public:
+	Maximum(Expression* left, Expression* right): SubExpression(left, right){
+		}
+		double evaluate() {
+		       return (left->evaluate() > right->evaluate()) ? left->evaluate() : right->evaluate();
+		    }
+};
+
+
+
+#endif /* MAXIMUM_H_ */

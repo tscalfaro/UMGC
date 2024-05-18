@@ -1,0 +1,77 @@
+package project_3;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main (String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Would you like to create a BST? Y/N");
+		String line = scan.nextLine();
+		char c;
+		
+		while(!line.isEmpty()) {
+			line.toUpperCase();
+			c = line.charAt(0);
+			
+			if (c == 'Y') {
+				menuLoop(c, scan);
+			}
+			line = "";
+		}
+		System.out.println("Thanks for using the BST creator program.");
+		
+	}
+	
+	public static void menuLoop(char c, Scanner scan) {
+		
+		try {
+			System.out.println("Input the BST in the form indicated above");
+			String input = scan.nextLine().trim();
+			
+			InvalidInputException.validatePreOrderString(input);
+			String bstString = convertString(input);
+			System.out.print(bstString);
+			BinaryTree bst = new BinaryTree(bstString);
+			System.out.println("Your BST:");
+			bst.printIndented();
+			
+			if (bst.isBalanced()) {
+				System.out.println("This BST is balanced");
+			}
+			
+		} catch (InvalidInputException e) {
+			System.out.println("Error " + e.getMessage());
+		}
+	}
+	
+	public static String convertString(String inputString) {
+		StringBuilder result = new StringBuilder();
+		Stack<String> stack = new Stack<>();
+		StringBuilder currentNumber = new StringBuilder();
+		
+		for (char c : inputString.toCharArray()) {
+            if (Character.isDigit(c)) {
+                currentNumber.append(c);
+            } else if (c == '(') {
+                if (currentNumber.length() > 0) {
+                    result.append(currentNumber).append(", ");
+                    currentNumber.setLength(0); // Reset currentNumber
+                }
+                stack.push("(");
+            } else if (c == ')') {
+                if (currentNumber.length() > 0) {
+                    result.append(currentNumber).append(", ");
+                    currentNumber.setLength(0); // Reset currentNumber
+                }
+                stack.pop(); // Discard opening parenthesis
+            } else if (c == '*') {
+                // Do nothing, asterisk indicates end of a subtree
+            }
+        }
+
+		
+		return result.substring(0, result.length() - 2);
+	}
+}

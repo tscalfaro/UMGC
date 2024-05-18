@@ -1,0 +1,14 @@
+/* static/style.css */
+
+body {
+    background-color: slategray;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #336699;
+}
+
+p {
+	color: goldenrod;
+}

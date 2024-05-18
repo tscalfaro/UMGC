@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FlaskProjects/hello_world/templates/newTemplate.html&apos; to &apos;myTemp.html&apos;" description="Rename resource &apos;newTemplate.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="hello_world/templates/newTemplate.html" name="myTemp.html" stamp="1700853384176" updateReferences="true"/>
+</session>

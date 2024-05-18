@@ -1,0 +1,19 @@
+package application;
+
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
+
+public class Lane extends Pane {
+	private Rectangle lane;
+	private Circle light;
+	private double width = 200;
+	private double height = 500;
+	
+	public Lane() {
+		setPrefSize(width, height);
+		lane = new Rectangle(width, height, Color.BLACK);
+		light = new Circle(width / 2, height / 4, height / 8, Color.RED);
+	}
+}

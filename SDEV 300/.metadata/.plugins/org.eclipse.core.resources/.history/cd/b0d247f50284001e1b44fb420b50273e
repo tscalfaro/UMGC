@@ -1,0 +1,98 @@
+'''
+Created on Nov 15, 2023
+
+@author: tscal
+Created by: Antonio Scalfaro
+SDEV 300 / 7381
+Lab 5 - Data Analysis
+This program ...
+'''
+import pandas as pd
+
+
+def welcome_message():
+    """
+    Print welcome message with program and developer details
+    """
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 5 - Data Analysis")
+    print("This program ... ")
+    print("---------------------------------------------------------\n")
+
+def exit_message():
+    """
+    Print exit message
+    """
+    print("Thank you for using the Data Analysis program\n")
+    print("---------------------------------------------------------\n")
+
+def file_menu():
+    """
+    Print file menu and return selection, blank String if Exit
+    """
+    f = ""
+    while True:
+        print("Select the file you'd like to analyze")
+        print("1 - Population Data")
+        print("2 - Housing Data")
+        print("3 - Exit")
+        selection = input().strip()
+        try:
+            selection = int(selection)
+            if selection == 1:
+                print("You've selected Population Data")
+                f = "PopChange.csv"
+            elif selection == 2:
+                print("You've selected Housing Data")
+                f = "Housing.csv"
+            elif selection == 3:
+                break
+            else:
+                print("Selection not valid, try again.")
+                continue
+        except ValueError as e:
+            print(f"Error: {e}. Please enter valid numeric input")
+        break
+    return f
+
+def housing_menu():
+    pass
+
+def pop_change_menu():
+    print("Please select the column you want analyzed:")
+    print("1 - Pop Apr 1")
+    print("2 - Pop Jul 1")
+    print("3 - Change Pop")
+    print("4 - Exit Column")
+    choice = input().strip()
+    try:
+        choice = int(choice)
+        if choice > 0 and choice < 5:
+            pass
+        else:
+            raise ValueError
+    except ValueError as e:
+       print(f"Error: {e}. Please enter valid numeric input")
+
+def main():
+    """
+    Main function to initiate program
+    """
+    welcome_message()
+    program_cont = True #Continue Token
+    while program_cont:
+        file_name = file_menu() #Get file name or empty string for exit
+        if len(file_name) == 0: #Exit option chosen
+            exit_message()
+            program_cont = False
+            continue
+        df = pd.read_csv(file_name) #Read in data
+        if file_name == "Housing.csv":
+            housing_menu()
+        else:
+            pop_change_menu()
+        print(df.head())
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,55 @@
+package assignment_3;
+
+import java.util.Date;
+import java.util.UUID;
+
+public class Assert {
+
+	public static void assertEqualsDouble(double actual, double expected) {
+		
+	}
+	
+	public static void assertNotEqualsDouble(double actual, double expected) {
+		
+	}
+	
+	public static void assertEqualsInt(int actual, int expected) {
+		
+	}
+	
+	public static void assertNotEqualsInt(int actual, int expected) {
+		
+	}
+	
+	public static void assertEqualsLong(long actual, long expected) {
+		
+	}
+	
+	public static void assertNotEqualsLong(long actual, long expected) {
+		
+	}
+	
+	public static void assertEqualsString(String actual, String expected) {
+		
+	}
+	
+	public static void assertNotEqualsString(String actual, String expected) {
+		
+	}
+	
+	public static void assertEqualsDate(Date actual, Date expected) {
+		
+	}
+	
+	public static void assertNotEqualsDate(Date actual, Date expected) {
+		
+	}
+	
+	public static void assertEqualsUUID(UUID actual, UUID expected) {
+		
+	}
+	
+	public static void assertNotEqualsUUID(UUID actual, UUID expected) {
+		
+	}
+}

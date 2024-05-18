@@ -1,0 +1,74 @@
+package assignment_3;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.UUID;
+
+public class Reservation {
+
+	int guestID;
+	String roomType;
+	String reservationStartDate;
+	String reservationEndDate;
+	
+	//getters
+	public UUID getReservationID() {
+		UUID uuid = new UUID.randomUUID();
+		return uuid;
+	}
+	
+	public Date getReservationDate() {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
+		Date date = null;
+		try {
+			date = dateFormat.parse(reservationStartDate);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}
+	
+	public int getGuestID() {
+		return guestID;
+	}
+	
+	public String getRoomType() {
+		return roomType;
+	}
+	
+	public String getReservationStartDate() {
+		return reservationStartDate;
+	}
+	
+	public String getReservationEndDate() {
+		return reservationEndDate;
+	}
+	
+	//setters
+	public void setCustomerID(int newValue) {
+		this.guestID = newValue;
+	}
+	
+	public void setRoom(String newValue) {
+		this.roomType = newValue;
+	}
+	
+	public void setReservationStartDate(String newValue) {
+		this.reservationStartDate = newValue;
+	}
+	
+	public void setReservationEndDate(String newValue) {
+		this.reservationEndDate = newValue;
+	}
+	
+	public long calculateReservationNumberOfDays() throws Exception {
+		long days = 0;
+		return days;
+	}
+	
+	public double calculateReservationBillAmount() throws Exception {
+		double total = 0;
+		return total;
+	}
+}

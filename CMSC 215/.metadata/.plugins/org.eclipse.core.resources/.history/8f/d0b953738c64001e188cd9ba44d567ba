@@ -1,0 +1,40 @@
+package application;
+
+public class Interval<T extends Comparable<T>> {
+	private T start;
+	private T end;
+	
+	public Interval(T start, T end) {
+		this.start = start;
+		this.end = end;
+	}
+	
+	public T getStart() {
+		return start;
+	}
+	
+	public T getEnd() {
+		return end;
+	}
+	
+	public boolean within(T value) {
+		 if (start.compareTo(end) <= 0) {
+		        // Interval does not span across 12:00 PM
+		        return value.compareTo(start) >= 0 && value.compareTo(end) <= 0;
+		    } else {
+		        // Interval spans across 12:00 PM, handle the cases separately
+		        return (value.compareTo(start) >= 0 && value.compareTo(end) <= 0) || 
+		               (value.compareTo(start) >= 0 && value.compareTo(end) >= 0) || 
+		               (value.compareTo(start) <= 0 && value.compareTo(end) <= 0);
+		    }
+	}
+	
+	public boolean subinterval(Interval<T> other) {
+		return other.getStart().compareTo(start) >= 0 && other.getEnd().compareTo(end) <= 0;
+	}
+	
+	public boolean overlaps(Interval<T> other) {
+		return end.compareTo(other.getStart()) >= 0 && start.compareTo(other.getEnd()) <= 0 &&
+		           (start.compareTo(end) <= 0 || other.start.compareTo(other.end) <= 0);
+	}
+}

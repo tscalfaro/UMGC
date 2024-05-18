@@ -1,0 +1,90 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+
+public class Main extends Application {
+	
+	private Graph graph;
+	private GraphPane graphPane;
+	private String[] vertexNames;
+	
+	@Override
+	public void start(Stage primaryStage) {
+		graph = new Graph();
+		graphPane = new GraphPane(graph);
+		
+		TextField vertex1Field = new TextField();
+		TextField vertex2Field = new TextField();
+		TextField outputField = new TextField();
+		Text vertex1 = new Text("Vertex 1");
+		Text vertex2 = new Text("Vertex 2");
+		Button addEdgeButton = new Button("Add Edge");
+		Button isConnectedButton = new Button("Is Connected");
+		Button hasCycleButton = new Button("Has Cycle");
+		Button depthFirstSearchButton = new Button("Depth First Search");
+		Button breadthFirstSearchButton = new Button("Breadth First Search");
+		
+		vertex1Field.setStyle("-fx-pref-width: 25px;");
+		vertex2Field.setStyle("-fx-pref-width: 25px;");
+		
+		addEdgeButton.setOnAction(e -> {
+			
+		});
+		
+		isConnectedButton.setOnAction(null);
+		
+		hasCycleButton.setOnAction(null);
+		
+		depthFirstSearchButton.setOnAction(null);
+		
+		breadthFirstSearchButton.setOnAction(null);
+		
+		graphPane.setOnMouseClicked(e -> {
+			graph.addVertex(new Vertex (e.getX(), e.getY(), "A"));
+			graphPane.drawGraph();
+		});
+		
+		BorderPane root = new BorderPane();
+		HBox buttonsBox = new HBox(isConnectedButton, hasCycleButton,
+				depthFirstSearchButton, breadthFirstSearchButton);
+		VBox bottomBox = new VBox(buttonsBox, outputField);
+		bottomBox.setAlignment(Pos.CENTER);
+		HBox addEdgeBox = new HBox(addEdgeButton, vertex1, vertex1Field, vertex2, vertex2Field);
+		addEdgeBox.setAlignment(Pos.CENTER);
+		root.setCenter(graphPane);
+		root.setTop(addEdgeBox);
+		root.setBottom(bottomBox);
+		root.setPadding(new Insets(10));
+		Scene scene = new Scene(root, 600, 400);
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Project 4 - Undirected Graph GUI");
+		primaryStage.show();
+	}
+	
+	private String newVertexName() {
+		String vertexName = "";
+	    if (vertexNames.length == 0) {
+	        vertexName = "A";
+	    } else {
+	        String lastVertexName = vertexNames[vertexNames.length - 1];
+	        char nextChar = (char) (lastVertexName.charAt(0) + 1);
+	        vertexName = (nextChar > 'Z') ? lastVertexName + 'A' : lastVertexName.substring(0, 1) + nextChar;
+	    }
+	    return vertexName;
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

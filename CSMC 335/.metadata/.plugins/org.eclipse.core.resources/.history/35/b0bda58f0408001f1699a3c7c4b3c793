@@ -1,0 +1,76 @@
+package application;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+
+
+public class Main extends Application {
+	private int seconds = 0;
+	private Label timerLabel;
+	private Button pauseBtn;
+	private Button stopBtn;
+	private Button startBtn;
+	
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			timerLabel = new Label("Seconds: 0");
+			timerLabel.setStyle("-fx-pref-width: 100px;");
+			VBox topBox = new VBox();
+			topBox.setPadding(new Insets(10));
+			topBox.getChildren().add(timerLabel);
+			
+			pauseBtn = new Button("Pause");
+			stopBtn = new Button("Stop");
+			startBtn = new Button("Start");
+			HBox btnBox = new HBox();
+			btnBox.setPadding(new Insets(10));
+			btnBox.setSpacing(25);
+			btnBox.setAlignment(Pos.CENTER);
+			btnBox.getChildren().addAll(startBtn, stopBtn, pauseBtn);
+			BorderPane root = new BorderPane();
+			root.setTop(topBox);
+			root.setBottom(btnBox);
+			Scene scene = new Scene(root,1200,750);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Traffic Light Simulator");
+			primaryStage.show();
+			startTimer();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	private void startTimer() {
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                seconds++;
+                Platform.runLater(() -> {
+                    timerLabel.setText("Seconds: " + seconds);
+                });
+            }
+        };
+        // Schedule the task to run every second
+        timer.scheduleAtFixedRate(task, 0, 1000);
+    }
+}

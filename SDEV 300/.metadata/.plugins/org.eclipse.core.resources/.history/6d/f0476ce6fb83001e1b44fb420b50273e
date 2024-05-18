@@ -1,0 +1,27 @@
+'''
+Created on Nov 15, 2023
+
+@author: tscal
+Created by: Antonio Scalfaro
+SDEV 300 / 7381
+Lab 5 - Data Analysis
+This program ...
+'''
+def welcome_message():
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 5 - Data Analysis")
+    print("This program ... ")
+    print("---------------------------------------------------------\n")
+
+def exit_message():
+    print("Thank you for using the Data Analysis program\n")
+    print("---------------------------------------------------------\n")
+
+def main():
+    welcome_message()
+    
+    exit_message()
+
+if __name__ == '__main__':
+    pass

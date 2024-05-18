@@ -1,0 +1,14 @@
+/*
+ * multiply.cpp
+ *
+ *  Created on: Apr 30, 2024
+ *      Author: tscal
+ */
+
+#include "multiply.h"
+
+multiply::multiply() {
+	// TODO Auto-generated constructor stub
+
+}
+

@@ -1,0 +1,18 @@
+'''
+Created on Nov 3, 2023
+
+@author: tscal
+'''
+def welcome_message():
+    print("Created by: Antonio Scalfaro")
+    print("SDEV 300 / 7381")
+    print("Lab 3 - States Information")
+    print("This program allows the user to look up information on states: " +
+          "their capital, population, and state flower. When searching by a " +
+          "singular state, you can get that information plus an image of the " +
+          "state flower. The user can see a bar graph of the 5 most populated " +
+          "states. Lastly, a user can edit the population of a state.")
+def main():
+    
+if __name__ == '__main__':
+    pass

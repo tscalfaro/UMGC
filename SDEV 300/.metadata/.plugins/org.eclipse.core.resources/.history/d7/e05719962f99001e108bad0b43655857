@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="landing-page">
+	
+    <section class="landing-section-1">
+        <!-- Content for the first section -->
+        <h3>Section</h3>
+        <h1>Leah Scalfaro</h1>
+        <section><h3>Marketing Professional</h3> <a>Email Me</a></section>
+    </section>
+
+    <section class="landing-section-2">
+        <!-- Content for the second section -->
+        <h3>Section 2</h3>
+    </section>
+	</div>
+    <!-- Repeat for other sections... -->
+
+{% endblock %}

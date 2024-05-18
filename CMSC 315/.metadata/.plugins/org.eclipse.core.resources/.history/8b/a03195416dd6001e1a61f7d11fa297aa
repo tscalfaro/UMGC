@@ -1,0 +1,42 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Graph {
+
+	private final Map<Vertex, List<Vertex>> adjacencyList;
+	
+	public Graph() {
+		this.adjacencyList = new HashMap<>();
+	}
+	
+	public void addVertex(Vertex vertex) {
+		adjacencyList.putIfAbsent(vertex, new ArrayList<>());
+	}
+	
+	public void addEdge(Vertex source, Vertex destination) {
+		adjacencyList.get(source).add(destination);
+		adjacencyList.get(destination).add(source);
+	}
+	
+	public boolean hasCycles() {
+		return false;
+	}
+	
+	public boolean isConnected() {
+		
+		
+		return false;
+	}
+	
+	public List<Vertex> depthFirstSearch(Vertex startVertex){
+		return null;
+	}
+	
+	public List<Vertex> breadthFirstSearch(Vertex startVertex){
+		return null;
+	}
+}

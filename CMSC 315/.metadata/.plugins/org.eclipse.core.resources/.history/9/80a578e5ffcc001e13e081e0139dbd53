@@ -1,0 +1,16 @@
+package project_3;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main (String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Would you like to create a BST? Y/N");
+		
+		if (scan.nextLine().toUpper() == 'Y') {
+			
+		}
+	}
+}

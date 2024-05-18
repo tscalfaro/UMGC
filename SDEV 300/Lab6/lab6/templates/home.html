@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <title>Lab 6 - Working With Web Apps</title>
+</head>
+<body>
+	
+	<h1>My 3 Favorite Baseball Players of All Time</h1>
+	<nav>
+		<ul class="horizontal-list">
+            <li class="navBar"><a href="/home">Home</a></li>
+       		<li class="navBar"><a href="/utley">Chase Utley</a></li>
+       		<li class="navBar"><a href="/trout">Mike Trout</a></li>
+       		<li class="navBar"><a href="/harper">Bryce Harper</a></li>
+       		<li class="navBar"><a href="/update_password">Update Password</a></li>
+        </ul>
+	</nav>
+	<p>Listed below are my three favorite baseball players of all time. I would bet you can tell what my 
+		favorite ballclub is, from the list alone. Enjoy.
+	</p>
+	<p>
+		<ol>
+			<li>Chase Utley</li>
+			<li>Mike Trout</li>
+			<li>Bryce Harper</li>
+		</ol>
+	</p>
+	<h3>Some stats from Utley, Trout, & Harper</h3>
+	<table>
+		<tr>
+			<th>Player</th>
+			<td>Utley</td>
+			<td>Trout</td>
+			<td>Harper</td>
+		</tr>
+		<tr>
+			<th>Homeruns</th>
+			<td>259</td>
+			<td>368</td>
+			<td>306</td>
+		</tr>
+		<tr>
+			<th>Hits</th>
+			<td>1885</td>
+			<td>1624</td>
+			<td>1513</td>
+		</tr>
+		<tr>
+			<th>RBI</th>
+			<td>1025</td>
+			<td>940</td>
+			<td>889</td>
+		</tr>
+	</table>
+	<h3>More of My Work</h3>
+	<p>
+		Want to visit my personal site I created a year ago using JS, react, HTML, and CSS?
+		It's far from perfect but its a good start, click the link below
+	</p>
+	<a href="http://antonioscalfaro.com/">My Portfolio Site</a>
+	<div id="datetime-container">
+    	{{ formatted_datetime }}
+	</div>
+</body>
+</html>

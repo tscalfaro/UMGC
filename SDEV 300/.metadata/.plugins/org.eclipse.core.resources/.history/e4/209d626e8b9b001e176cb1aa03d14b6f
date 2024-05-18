@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+	<div class="landing-page">
+	    <section class="landing-section-1">
+	        <h3>Portfolio</h3>
+	        <h1>Leah<br>Scalfaro</h1>
+	        <section class="landing-section-1-bottom">
+				<h3 style="margin-top: 20px;">Marketing Professional</h3>
+				<a href="mailto:leahscalfaro@gmail.com">Email Me</a>
+				</section>
+	    </section>
+	
+	    <section class="landing-section-2"></section>
+	</div>
+	<div class="bio-page">
+		<section class="bio-section-1">
+			<h3>BIO</h3>
+			<div class="bio-img-div"></div>
+		</section>
+		<section class="bio-section-2">
+			<h2>I am a creative project manager + marketing professional</h2>
+			<p>I thrive in a fast-paced collaborative environment, where I excel in my ability
+				to deliver results and exceed client expectations.
+			</p>
+			<p>With my strong work ethic, strategic thinking, and dedication to achieving 
+				marketing goals, I believe I would be a valuable asset to any marketing team.
+			</p>
+		</section>
+	</div>
+	<div class="background-page">
+		<section class="background-section-1">
+			<h1>Background</h1>
+			<p>Marketing Account Executive, Legal Communications<br>2017-present</p>
+			<p>Reporter + Photographer, Hi-Desert Star<br>2016-2017</p>
+			<p>Bloomsburg University<br>2013-2016<br>BA English, with a minor in Writing
+			for the Digital Arts cum laude, 3.69 GPA</p>
+		</section>
+		<section class="background-section-2">
+			<h1>Expertise</h1>
+			<ul>
+				<li>Client Management</li>
+				<br>
+				<li>Marketing Strategy</li>
+				<br>
+				<li>Creative Project Management</li>
+				<br>
+				<li>Content Visualization & Execution</li>
+				<br>
+				<li>Brand Refresh & Transformation</li>
+				<br>
+				<li>Branding & Visual Communication</li>
+			</ul>
+		</section>
+		<section class="background-section-3">
+			<div class="background-section-3-img"></div>
+		</section>
+	</div>
+	<div class="work-page">
+		<section class="work-page-section-1">
+			<h2>WORK</h2>
+			<div class="work-page-section-1-img">
+				<img src="../static/images/realtor-sc-1.png" />
+				<img src="../static/images/realtor-sc-2.png" />
+				<img src="../static/images/realtor-sc-1.png" />
+			</div>
+		</section>
+		<section class="work-page-section-2">
+			<h1>Legal Marketing</h1>
+			<p>I worked with a local clinic to create a simple, thoughtful, and approachable
+				brand identity. We agreed on a two-color scheme and modern forms as the key
+				elements.
+			</p>
+		</section>
+	</div>
+	<div class="photography-page">
+		<h1>Lifestyle<br>Photography</h1>
+		<section class="photography-page-img-section">
+			<img src="../static/images/R6__9798-Edit.jpg">
+			<img src="../static/images/R6__9715.jpg">
+			<img src="../static/images/R6__8102-Edit.jpg">
+		</section>
+		<p>I am a co-owner of a lifestyle photography business with my husband. Together, we 
+			capture some of the happiest times in a person's life. See more of our work
+			<a href="https://www.whitelotusphotos.com/" target="_blank">here</a>.
+		</p>
+	</div>
+{% endblock %}

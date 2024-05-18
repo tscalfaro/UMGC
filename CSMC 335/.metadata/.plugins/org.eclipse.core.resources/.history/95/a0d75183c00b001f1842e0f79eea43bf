@@ -1,0 +1,5 @@
+package application;
+
+public enum TrafficLightState {
+	GREEN, YELLOW, RED
+}
